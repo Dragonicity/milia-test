@@ -65,6 +65,30 @@ $navbar-default-toggle-border-color: $white;
   }
 }
 
+#logo {
+  float: left;
+  margin-top: 12px;
+  margin-right: 20px;
+  font-size: 1.15em;
+  color: white;
+  letter-spacing: 0px;
+  padding-top: 0px;
+  font-weight: normal;
+  &:hover {
+    color: magenta;
+    text-decoration: none;
+  }
+}
+
+/* change navbar-toggler inside lines color (stroke) */
+.navbar-dark span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+/* change hamburger button border color */
+button.navbar-toggler.navbar-toggler-right {
+  border-color: white;
+}
 
 /* miscellaneous */
 
