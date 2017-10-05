@@ -74,6 +74,15 @@ $navbar-default-toggle-border-color: $white;
   }
 }
 
+.navbar-nav .nav-link .li {
+  color: $white;
+}
+
+.navbar-nav .nav-link .li .active {
+  color: $accent-color;
+}
+
+
 #logo {
   float: left;
   margin-top: 12px;
@@ -142,7 +151,7 @@ html,
 body {
   height: 100%;
   padding-top: 3rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', 'Open Sans', sans-serif;
 }
 
 body {
@@ -173,7 +182,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-dark;
+  color: $secondary-text-color;
 }
 
 p {
