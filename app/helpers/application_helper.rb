@@ -3,11 +3,11 @@ module ApplicationHelper
     [
       {
         url: about_path,
-        title: 'About Me'
+        title: t(:about)
       },
       {
         url: contact_path,
-        title: 'Contact'
+        title: t(:contact)
       } 
     ]
   end

@@ -8,6 +8,6 @@ module SetLayoutDefaults
   def set_defaults
     @page_title   = "Milia Test"
     @seo_keywords = "Rails Milia Multi-tenancy"
-    @copyright    = "&copy; Copyright #{Time.now.year}".html_safe
+    @copyright    = "&copy;".html_safe
   end
 end
