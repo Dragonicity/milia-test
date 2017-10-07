@@ -32,6 +32,20 @@ $navbar-default-toggle-hover-bg: $accent-color;
 $navbar-default-toggle-icon-bar-bg: $default-primary-color;
 $navbar-default-toggle-border-color: $accent-color;
 
+/* Alerts */
+
+.alert-notice {
+  @extend .alert-success;
+}
+.alert-alert {
+  @extend .alert-danger;
+}
+
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /* Typography */
 
 html,
@@ -134,15 +148,6 @@ footer {
 .locale {
   float: right;
   color: $gray-dark;
-}
-
-/* Alerts */
-
-.alert-notice {
-  @extend .alert-success;
-}
-.alert-alert {
-  @extend .alert-danger;
 }
 
 label.required:after {

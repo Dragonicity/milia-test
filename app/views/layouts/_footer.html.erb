@@ -5,7 +5,7 @@
       <%= @copyright %> &nbsp; <%= t :copyright %> 
       <%= link_to(" Dragonicity Ltd", 'http://www.dragonicity.com') %>, 
       &nbsp; <%= t :all_rights_reserved %>
-      <%= form_tag root_path, class: 'locale', method: :get do %>
+      <%= form_tag request.path, class: 'locale', method: :get do %>
         <%= select_tag 'set_locale', 
             options_for_select(LANGUAGES, I18n.locale.to_s),
             onchange: 'this.form.submit()' %>
