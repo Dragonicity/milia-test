@@ -1,14 +1,14 @@
 <% if obj.errors.any? %>
   <div class="row">
     <div class="col-xs-offset-2 col-xs-8">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <div class="panel-title">
+      <div class="card card-danger">
+        <div class="card-heading">
+          <div class="card-title">
             <%= raw t('errors.template.header', count: obj.errors.count,
               model: t('activerecord.models.' + obj.class.to_s.downcase )) %>&nbsp;
               <%= t('errors.template.body') %>
           </div>
-          <div class="panel-body">
+          <div class="card-body">
             <ul>
               <% obj.errors.full_messages.each do | msg | %>
                 <li><%= raw msg %></li>

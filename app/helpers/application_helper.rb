@@ -8,6 +8,10 @@ module ApplicationHelper
       {
         url: new_contact_path,
         title: t(:contact)
+      }, 
+      {
+        url: retreat_path,
+        title: t(:retreat)
       } 
     ]
   end

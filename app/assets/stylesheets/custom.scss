@@ -155,6 +155,15 @@ label.required:after {
     color: red;
 }
 
+.card-container {
+  color: black;
+  text-align: left;
+}
+
+.card-container > .card {
+  padding: 20px;
+}
+
 /* universal */
 
 form {

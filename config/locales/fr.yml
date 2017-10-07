@@ -1,7 +1,21 @@
 fr:
-  about:                "Sur"
-  all_rights_reserved:  "tous les droits sont réservés"
-  brand:                "Marque"
-  contact:              "Contact"
-  copyright:            "Droits d'auteur"
-  home:                 "Page d'accueil"
+  about:                  "Sur"
+  all_rights_reserved:    "tous les droits sont réservés"
+  brand:                  "Marque"
+  contact:                "Contact"
+  contact_message_sent:   "Votre message a été envoyé"
+  contact_message_error:  "Une erreur est survenue avec votre message"
+  copyright:              "Droits d'auteur"
+  home:                   "Page d'accueil"
+  retreat:                "Retraites"
+
+  contacts:
+    new:
+      title:              "Contact"
+    form:
+      name:               "Nom"
+      email:              "Courriel"
+      phone:              "Téléphone"
+      subject:            "Assujettir"
+      message:            "Message"
+      send:               "Envoyer"

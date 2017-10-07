@@ -1,7 +1,21 @@
 zh-TW:
-  about:                "關於"
-  all_rights_reserved:  "版權所有"
-  brand:                "牌"
-  contact:              "聯繫"
-  copyright:            "版權"
-  home:                 "主頁網頁"
+  about:                  "關於"
+  all_rights_reserved:    "版權所有"
+  brand:                  "牌"
+  contact:                "聯繫"
+  contact_message_sent:   "您的郵件已發送"
+  contact_message_error:  "您的郵件時出錯"
+  copyright:              "版權"
+  home:                   "主頁網頁"
+  retreat:                "撤退"
+
+  contacts:
+    new:
+      title:              "聯繫"
+    form:
+      name:               "名稱"
+      email:              "電子郵件"
+      phone:              "電話"
+      subject:            "學科"
+      message:            "信息"
+      send:               "發送"

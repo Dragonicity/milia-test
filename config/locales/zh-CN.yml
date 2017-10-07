@@ -1,7 +1,21 @@
 zh-CN:
-  about:                "关于"
-  all_rights_reserved:  "版权所有"
-  brand:                "牌"
-  contact:              "联系"
-  copyright:            "版权"
-  home:                 "主页网页"
+  about:                  "关于"
+  all_rights_reserved:    "版权所有"
+  brand:                  "牌"
+  contact:                "联系"
+  contact_message_sent:   "您的邮件已发送"
+  contact_message_error:  "您的邮件时出错"
+  copyright:              "版权"
+  home:                   "主页网页"
+  retreat:                "撤退"
+
+  contacts:
+    new:
+      title:              "联系"
+    form:
+      name:               "名称"
+      email:              "电子邮件"
+      phone:              "电话"
+      subject:            "学科"
+      message:            "信息"
+      send:               "发送"

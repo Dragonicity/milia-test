@@ -1,7 +1,21 @@
 en:
-  about:                "About"
-  all_rights_reserved:  "all rights reserved"
-  brand:                "Brand"
-  contact:              "Contact"
-  copyright:            "Copyright"
-  home:                 "Home"
+  about:                  "About"
+  all_rights_reserved:    "all rights reserved"
+  brand:                  "Brand"
+  contact:                "Contact"
+  contact_message_sent:   "Your message has been sent"
+  contact_message_error:  "An error occurred with your message"
+
+  copyright:              "Copyright"
+  home:                   "Home"
+  retreat:                "Retreats"
+  contacts:
+    new:
+      title:              "Contact"
+    form:
+      name:               "Name"
+      email:              "Email"
+      phone:              "Phone"
+      subject:            "subject"
+      message:            "message"
+      send:               "Send"
