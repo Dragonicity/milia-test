@@ -1,22 +1,21 @@
 <% if obj.errors.any? %>
+<div class="container"> 
   <div class="row">
-    <div class="col-xs-offset-2 col-xs-8">
-      <div class="card card-danger">
-        <div class="card-heading">
-          <div class="card-title">
+    <div class="col-md-12 no-padding">
+        <div class="alert alert-alert %>">
+          <a href="#" class="close" data-dismiss="alert">&#215;</a>
+          <h6>
             <%= raw t('errors.template.header', count: obj.errors.count,
-              model: t('activerecord.models.' + obj.class.to_s.downcase )) %>&nbsp;
-              <%= t('errors.template.body') %>
-          </div>
-          <div class="card-body">
-            <ul>
-              <% obj.errors.full_messages.each do | msg | %>
-                <li><%= raw msg %></li>
-              <% end %>
-            </ul>
-          </div>
+                model: t('activerecord.models.' + obj.class.to_s.downcase )) %>&nbsp;
+            <%= t('errors.template.body') %>
+          </h6>
+          <ul>
+            <% obj.errors.full_messages.each do | msg | %>
+              <li><%= raw msg %></li>
+            <% end %>
+          </ul>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
-<% end %>
+</div>

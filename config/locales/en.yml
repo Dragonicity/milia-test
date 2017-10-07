@@ -9,6 +9,23 @@ en:
   copyright:              "Copyright"
   home:                   "Home"
   retreat:                "Retreats"
+  
+  number:
+    currency:
+      format:
+        unit:       "US$"
+        precision:  2
+        separator:  "."
+        delimiter:  ","
+        format:     "%u%n"
+
+  errors:
+    template:
+      body:         "There were problems with the following fields:"
+      header:       
+        one:        "1 error prohibited this %{model} from being saved"
+        other:      "%{count} errors prohibited this %{model} from being saved"
+
   contacts:
     new:
       title:              "Contact"

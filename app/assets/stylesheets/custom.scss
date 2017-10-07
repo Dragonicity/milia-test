@@ -131,6 +131,10 @@ footer {
   }
 }
 
+.footer, .push {
+    height: 155px;
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -207,11 +211,8 @@ ul.actions {
   text-align: right;
 }
 
-.field_with_errors {
-  color: red;
-  background: transparent;
-}
-.field_with_errors input {
+.field_with_errors input,
+.field_with_errors textarea {
   border: thin solid red;
 }
 
