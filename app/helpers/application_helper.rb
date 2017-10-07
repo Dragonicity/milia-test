@@ -6,7 +6,7 @@ module ApplicationHelper
         title: t(:about)
       },
       {
-        url: contact_path,
+        url: new_contact_path,
         title: t(:contact)
       } 
     ]
