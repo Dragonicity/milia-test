@@ -12,7 +12,7 @@ module ApplicationHelper
       {
         url: retreat_path,
         title: t(:retreat)
-      } 
+      }
     ]
   end
 
