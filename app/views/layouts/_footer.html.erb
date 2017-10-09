@@ -2,13 +2,13 @@
   <div class="navbar navbar-default fixed-bottom" role="navigation">
     <div class="navbar-text col-12">
       <hr>
-      <%= @copyright %> &nbsp; <%= t :copyright %> 
-      <%= link_to(" Dragonicity Ltd", 'http://www.dragonicity.com') %>, 
-      &nbsp; <%= t :all_rights_reserved %>
+      <%= @copyright %> &nbsp; <%= t :copyright %> <%= link_to(" Dragonicity Ltd", 'http://www.dragonicity.com') %>, &nbsp; <%= t :all_rights_reserved %>
+      <%= link_to(t('terms_of_service'), terms_of_service_path, class: "ml-3 mr-3") %>
+      <%= link_to(t('privacy_policy'), privacy_policy_path, class: "mr-3") %>
       <%= form_tag request.path, class: 'locale', method: :get do %>
         <%= select_tag 'set_locale', 
-            options_for_select(LANGUAGES, I18n.locale.to_s),
-            onchange: 'this.form.submit()' %>
+          options_for_select(LANGUAGES, I18n.locale.to_s),
+          onchange: 'this.form.submit()' %>
         <%= submit_tag 'submit' %>
         <%= javascript_tag "$('.locale input').hide()" %>
       <% end %>

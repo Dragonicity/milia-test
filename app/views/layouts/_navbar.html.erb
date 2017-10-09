@@ -10,10 +10,10 @@
       <%= nav_helper %>
       <div class="col float-right">
         <% if !current_user %>
-          <%= link_to(t('login'),    new_user_session_path, class: "nav-link float-right") %>
-          <%= link_to(t('register'), new_user_registration_path, class: "nav-link float-right") %>
+          <%= link_to(t('sign_in'),    new_user_session_path, class: "nav-link float-right") %>
+          <%= link_to(t('sign_up'), new_user_registration_path, class: "nav-link float-right") %>
         <% else %>
-          <%= link_to(t('logout'),   destroy_user_session_path, method: :delete, class: "nav-link float-right") %>
+          <%= link_to(t('sign_out'),   destroy_user_session_path, method: :delete, class: "nav-link float-right") %>
           <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 30)).html_safe, edit_user_registration_path, class: "nav-link float-right" %>
         <% end %>
       </div>

@@ -122,16 +122,15 @@ footer {
   width: 100%;
   margin-top: 45px;
   padding-top: 50px;
+  padding-left: 0px;
   margin-left: 0px;
-  float: left;
   ul {
     list-style: none;
     li {
-      float: left;
-      margin-left: 15px;
-      color: #0000EE;
+      margin-right: 20px;
+      color: $link;
       &:hover {
-       color: #551A8B;
+       color: $visited_link;
     }
     }
   }

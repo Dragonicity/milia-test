@@ -10,4 +10,10 @@ class PagesController < ApplicationController
 
   def retreat
   end
+
+  def terms_of_service
+  end
+
+  def privacy_policy
+  end
 end

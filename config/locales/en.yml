@@ -5,10 +5,16 @@ en:
   contact:                "Contact"
   contact_message_sent:   "Your message has been sent"
   contact_message_error:  "An error occurred with your message"
-
   copyright:              "Copyright"
   home:                   "Home"
   retreat:                "Retreats"
+  privacy_policy:         "Privacy Policy"
+  terms_of_service:       "Terms of Service"
+
+  edit_profile:           "Edit Profile"
+  sign_up:                "Register"
+  sign_in:                "Login"
+  sign_out:               "Logout"
   
   number:
     currency:
