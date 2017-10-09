@@ -12,6 +12,10 @@ module ApplicationHelper
       {
         url: retreat_path,
         title: t(:retreat)
+      },
+      {
+        url: blogs_path,
+        title: t(:blog)
       }
     ]
   end
@@ -27,4 +31,12 @@ module ApplicationHelper
   def active? path
     "active" if current_page? path
   end
+
+  def required?(obj, attr)
+    target = (obj.class == Class)? obj : obj.class
+    target.validators_on(attr).map(&:class).include?(
+      ActiveRecord::Validations::PresenceValidator)
+  end
+
+
 end

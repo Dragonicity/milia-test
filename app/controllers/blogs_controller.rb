@@ -1,10 +1,10 @@
 class BlogsController < ApplicationController
 
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
+  #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @blogss = Blog.all
+    @blogs = Blog.all
   end
 
   def show
@@ -49,7 +49,7 @@ class BlogsController < ApplicationController
     
     def blog_params
       params.require(:blog).permit(:title, :body, :thumb_nail, 
-        :main_image, :status :user_id)
+        :main_image, :status, :user_id)
     end
 
     def set_blog

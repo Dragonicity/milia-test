@@ -1,7 +1,7 @@
 <div class="page-header">
   <%= render 'shared/page_title', title: t('.title') %>
   <ul class="actions">
-    <li><%= link_to t('.index'), blogss_path, class: "index" %></li>
+    <li><%= link_to t('.index'), blogs_path, class: "index" %></li>
     <li><%= link_to t('.edit'), edit_blog_path(@blog), class: "edit" %></li>
     <li><%= link_to t('.delete'), blog_path, class: "delete", 
             method: :delete, data: { confirm: t('.are_you_sure') } %></li>
@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <th><%= t('.user') %>:&nbsp;</th>
-    <td><%= @blog.user.first_name + " " + @blog.user.last_name %></td>
+    <td><%= @blog.user.full_name %></td>
   </tr> 
  
 </table>
