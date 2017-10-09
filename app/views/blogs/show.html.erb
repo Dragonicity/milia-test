@@ -1,0 +1,25 @@
+<div class="page-header">
+  <%= render 'shared/page_title', title: t('.title') %>
+  <ul class="actions">
+    <li><%= link_to t('.index'), blogss_path, class: "index" %></li>
+    <li><%= link_to t('.edit'), edit_blog_path(@blog), class: "edit" %></li>
+    <li><%= link_to t('.delete'), blog_path, class: "delete", 
+            method: :delete, data: { confirm: t('.are_you_sure') } %></li>
+  </ul>
+</div>
+<table id="attributes">
+  
+  <tr>
+    <th><%= t('.title') %>:&nbsp;</th>
+    <td><%= @blog.title %></td>
+  </tr>
+   <tr>
+    <th><%= t('.body') %>:&nbsp;</th>
+    <td><%= @blog.body %></td>
+  </tr>
+  <tr>
+    <th><%= t('.user') %>:&nbsp;</th>
+    <td><%= @blog.user.first_name + " " + @blog.user.last_name %></td>
+  </tr> 
+ 
+</table>
