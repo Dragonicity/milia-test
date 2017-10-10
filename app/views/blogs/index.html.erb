@@ -1,7 +1,7 @@
 <div class="page-header">
-  <%= render 'shared/page_title', title: t('blog_index_title') %>
+  <%= render 'shared/page_title', title: t(:blog_index_title) %>
   <ul class="actions">
-    <li><%= link_to t('new'), new_blog_path, class: "new" %></li>
+    <li><%= link_to t(:new), new_blog_path, class: "new" %></li>
   </ul>
 </div>
 
@@ -12,9 +12,9 @@
   <p><%= blog.status %></p>
   <p><%= blog.user.full_name %></p>
   <p><%= blog.created_at %></p>
-    <p><%= link_to t('edit'), edit_blog_path(blog), 
+    <p><%= link_to t(:edit), edit_blog_path(blog), 
       class: "btn btn-xs btn-primary"%></p>
-    <p><%= link_to t('delete'), blog_path(blog), 
+    <p><%= link_to t(:delete), blog_path(blog), 
       class: "btn btn-xs btn-danger", method: :delete, 
-      data: { confirm: t('are_you_sure') } %></p>
+      data: { confirm: t(:are_you_sure) } %></p>
 <% end %>

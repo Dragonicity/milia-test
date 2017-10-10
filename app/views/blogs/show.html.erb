@@ -1,18 +1,14 @@
 <div class="page-header">
-  <%= render 'shared/page_title', title: t('blog_show_title') %>
+  <%= render 'shared/page_title', title: t(:blog_show_title) %>
   <ul class="actions">
-    <li><%= link_to t('index'), blogs_path, class: "index" %></li>
-    <li><%= link_to t('edit'), edit_blog_path(@blog), class: "edit" %></li>
-    <li><%= link_to t('delete'), blog_path, class: "delete", 
-            method: :delete, data: { confirm: t('are_you_sure') } %></li>
+    <li><%= link_to t(:index),  blogs_path, class: "index" %></li>
+    <li><%= link_to t(:edit),   edit_blog_path(@blog), class: "edit" %></li>
+    <li><%= link_to t(:delete), blog_path, class: "delete", 
+            method: :delete, data: { confirm: t(:are_you_sure) } %></li>
   </ul>
 </div>
 
-
 <%= image_tag @blog.main_image %>
-
 <h2><%= @blog.title %></h2>
 <p><%= @blog.body %></p>  
-<p><%= @blog.user.full_name %></p>  
-
-
+<p><%= @blog.user.full_name %></p>

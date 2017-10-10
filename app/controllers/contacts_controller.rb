@@ -9,9 +9,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.valid?
       ContactMailer.contact_message(@contact).deliver
-      redirect_to new_contact_path, notice: t('contact_message_sent')
+      redirect_to new_contact_path, notice: t(:contact_message_sent)
     else
-      flash[:alert] = t('contact_message_error')
+      flash[:alert] = t(:contact_message_error)
       render 'new'
     end
   end
