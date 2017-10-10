@@ -7,19 +7,12 @@
             method: :delete, data: { confirm: t('are_you_sure') } %></li>
   </ul>
 </div>
-<table id="attributes">
-  
-  <tr>
-    <th><%= t('title') %>:&nbsp;</th>
-    <td><%= @blog.title %></td>
-  </tr>
-   <tr>
-    <th><%= t('body') %>:&nbsp;</th>
-    <td><%= @blog.body %></td>
-  </tr>
-  <tr>
-    <th><%= t('user') %>:&nbsp;</th>
-    <td><%= @blog.user.full_name %></td>
-  </tr> 
- 
-</table>
+
+
+<%= image_tag @blog.main_image %>
+
+<h2><%= @blog.title %></h2>
+<p><%= @blog.body %></p>  
+<p><%= @blog.user.full_name %></p>  
+
+
