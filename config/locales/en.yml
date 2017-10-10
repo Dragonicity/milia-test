@@ -1,22 +1,66 @@
 en:
+
+  # Dictionary
+
   about:                  "About"
   all_rights_reserved:    "all rights reserved"
+  are_you_sure:           "Are you sure?"
   blog:                   "Blog"
+  body:                   "Body"
   brand:                  "Brand"
   contact:                "Contact"
+  copyright:              "Copyright"
+  create:                 "Create"
+  delete:                 "Delete"
+  edit:                   "Edit"
+  email:                  "Email"
+  home:                   "Home"
+  index:                  "Index"
+  message:                "Message"
+  name:                   "Name"
+  nay:                    "No"
+  new:                    "New"
+  phone:                  "Phone"
+  retreats:               "Retreats"
+  privacy_policy:         "Privacy Policy"
+  save:                   "Save"
+  send:                   "Send"
+  show:                   "Show"
+  status:                 "Status"
+  subject:                "Subject"
+  terms_of_service:       "Terms of Service"
+  title:                  "Title"
+  thumb_nail:             "Thumb Nail"
+  user:                   "User"
+  yay:                    "Yes"
+
+  # Controller notice and alert messages
+
+  created:                "successfully created"
+  not_created:            "was not created"
+  updated:                "successfully updated"
+  not_updated:            "was not updated"
+  deleted:                "successfully deleted"    
   contact_message_sent:   "Your message has been sent"
   contact_message_error:  "An error occurred with your message"
-  copyright:              "Copyright"
-  home:                   "Home"
-  retreat:                "Retreats"
-  privacy_policy:         "Privacy Policy"
-  terms_of_service:       "Terms of Service"
+
+  # Navbar components
 
   edit_profile:           "Edit Profile"
   sign_up:                "Register"
   sign_in:                "Login"
   sign_out:               "Logout"
+
+  # View titles
+
+  blog_edit_title:        "Edit blog"
+  blog_index_title:       "Blog"
+  blog_new_title:         "New blog"
+  blog_show_title:        "Blog"
+  contact_new_title:      "Contact"
   
+  # Standard contents
+
   number:
     currency:
       format:
@@ -32,14 +76,3 @@ en:
       header:       
         one:        "1 error prohibited this %{model} from being saved"
         other:      "%{count} errors prohibited this %{model} from being saved"
-
-  contacts:
-    new:
-      title:              "Contact"
-    form:
-      name:               "Name"
-      email:              "Email"
-      phone:              "Phone"
-      subject:            "subject"
-      message:            "message"
-      send:               "Send"

@@ -1,35 +1,23 @@
 <div class="page-header">
-  <%= render 'shared/page_title', title: t('.title') %>
+  <%= render 'shared/page_title', title: t('blog_index_title') %>
   <ul class="actions">
-    <li><%= link_to t('.new'), new_blog_path, class: "new" %></li>
+    <li><%= link_to t('new'), new_blog_path, class: "new" %></li>
   </ul>
 </div>
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <p>title</p>
-      <p>Body</p>
-      <p>User</p>
-      <th class="fit"><%= t('.actions') %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= blog.user.full_name %></td>
-        <td class="fit actions">
-          <%= link_to t('.show'), blog_path(blog),
+<% @blogs.each do |blog| %>
+  <p><%= blog.title %></p>
+  <p><%= blog.body %></p>
+  <p><%= image_tag blog.thumb_nail unless blog.thumb_nail.nil? %></p>
+  <p><%= blog.status %></p>
+  <p><%= blog.user.full_name %></p>
+  <p><%= blog.created_at %></p>
+
+          <%= link_to t('show'), blog_path(blog),
             class: "btn btn-xs btn-info"%>
-          <%= link_to t('.edit'), edit_blog_path(blog), 
+          <%= link_to t('edit'), edit_blog_path(blog), 
             class: "btn btn-xs btn-primary"%>
-          <%= link_to t('.delete'), blog_path(blog), 
+          <%= link_to t('delete'), blog_path(blog), 
             class: "btn btn-xs btn-danger", method: :delete, 
-            data: { confirm: t('.are_you_sure') } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            data: { confirm: t('are_you_sure') } %>
+<% end %>

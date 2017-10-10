@@ -1,32 +1,65 @@
 fr:
+ 
+# Dictionary
+
   about:                  "Sur"
   all_rights_reserved:    "tous les droits sont réservés"
+  are_you_sure:           "Êtes-vous sûr?"
   blog:                   "Blogue"
+  body:                   "Corps de texte"
   brand:                  "Marque"
   contact:                "Contact"
+  copyright:              "Droits d'auteur"
+  create:                 "Créer"
+  delete:                 "Effacer"
+  edit:                   "Modifier"
+  email:                  "Courriel"
+  home:                   "Page d'accueil"
+  index:                  "Indice"
+  message:                "Message"
+  name:                   "Nom"
+  nay:                    "Non"
+  new:                    "Nouveau"
+  phone:                  "Téléphone"
+  retreats:               "Retraites"
+  privacy_policy:         "Politique de confidentialité"
+  save:                   "Enregistrer"
+  send:                   "Envoyer"
+  show:                   "Montrer"
+  status:                 "Statut"
+  subject:                "Assujettir"
+  terms_of_service:       "Conditions d'utilisation"
+  title:                  "Titre"
+  thumb_nail:             "La vignette"
+  user:                   "Utilisateur"
+  yay:                    "Oui"
+
+  # Controller notice and alert messages
+
+  created:                "créé avec succès"
+  not_created:            "n'a pas été créé"
+  updated:                "mis à jour avec succès"
+  not_updated:            "n'a pas été mis à jour"
+  deleted:                "supprimé avec succès"    
   contact_message_sent:   "Votre message a été envoyé"
   contact_message_error:  "Une erreur est survenue avec votre message"
-  copyright:              "Droits d'auteur"
-  home:                   "Page d'accueil"
-  retreat:                "Retraites"
-  privacy_policy:         "Politique de confidentialité"
-  terms_of_service:       "Conditions d'utilisation"
+
+  # Navbar components
 
   edit_profile:           "Modifier le profil"
   sign_up:                "S'inscrire"
   sign_in:                "Se connecter"
   sign_out:               "Se déconnecter"
 
-  contacts:
-    new:
-      title:              "Contact"
-    form:
-      name:               "Nom"
-      email:              "Courriel"
-      phone:              "Téléphone"
-      subject:            "Assujettir"
-      message:            "Message"
-      send:               "Envoyer"
+  # View titles
+
+  blog_edit_title:        "Modifier le blogue"
+  blog_index_title:       "Blogues"
+  blog_new_title:         "Nouveau blogue"
+  blog_show_title:        "Blogue"
+  contact_new_title:      "Contact"
+  
+  # Standard contents
 
   activerecord:
     models:

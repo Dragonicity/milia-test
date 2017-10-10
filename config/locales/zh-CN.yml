@@ -1,32 +1,65 @@
 zh-CN:
+  
+  # Dictionary
+
   about:                  "关于"
   all_rights_reserved:    "版权所有"
+  are_you_sure:           "你确定？"
   blog:                   "博客"
+  body:                   "文字体"
   brand:                  "牌"
   contact:                "联系"
+  copyright:              "版权"
+  create:                 "创建"
+  delete:                 "删除"
+  edit:                   "编辑"
+  email:                  "电子邮件"
+  home:                   "主页网页"
+  index:                  "指数"
+  message:                "信息"
+  name:                   "名称"
+  nay:                    "没有"
+  new:                    "新"
+  phone:                  "电话"
+  retreats:               "撤退"
+  privacy_policy:         "隐私政策"
+  save:                   "保存"
+  send:                   "发送"
+  show:                   "显示"
+  status:                 "状态"
+  subject:                "学科"
+  terms_of_service:       "服务条款"
+  title:                  "标题"
+  thumb_nail:             "拇指指甲"
+  user:                   "用户"
+  yay:                    "是"
+
+  # Controller notice and alert messages
+
+  created:                "成功创建"
+  not_created:            "没有创建"
+  updated:                "成功更新"
+  not_updated:            "没有更新"
+  deleted:                "成功删除"    
   contact_message_sent:   "您的邮件已发送"
   contact_message_error:  "您的邮件时出错"
-  copyright:              "版权"
-  home:                   "主页网页"
-  retreat:                "撤退"
-  privacy_policy:         "隐私政策"
-  terms_of_service:       "服务条款"
+
+  # Navbar components
 
   edit_profile:           "编辑个人资料"
   sign_up:                "注册"
   sign_in:                "签到"
   sign_out:               "退出"
 
-  contacts:
-    new:
-      title:              "联系"
-    form:
-      name:               "名称"
-      email:              "电子邮件"
-      phone:              "电话"
-      subject:            "学科"
-      message:            "信息"
-      send:               "发送"
+  # View titles
+
+  blog_edit_title:        "编辑博客"
+  blog_index_title:       "博客"
+  blog_new_title:         "新博客"
+  blog_show_title:        "博客"
+  contact_new_title:      "联系"
+  
+  # Standard contents
 
   activerecord:
     models:

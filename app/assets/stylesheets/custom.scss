@@ -48,9 +48,11 @@ $navbar-default-toggle-border-color: $accent-color;
 
 /* Typography */
 
+/* word-break: keep-all stops Chinese, Japanese and Korean text wrapping */
+
 html,
 body {
-  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-family: 'Lato', 'Open Sans', sans-serif, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
   color: gray-dark;
   text-align: left;
   height: 100%;
@@ -59,6 +61,7 @@ body {
 
 p {
   font-size: 16px;
+  word-break: keep-all;
 }
 
 h1, .h1,
@@ -67,7 +70,8 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+  word-break: keep-all;
 }
 
 a:link {

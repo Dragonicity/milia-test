@@ -4,16 +4,16 @@
     <div class="container">
       <div class="row">
         <div class='col-xs-10 no-padding'>
-          <%= f.label t('.title'), class: ('required' if required?(@blog, :title)) %><br/>
+          <%= f.label t('title'), class: ('required' if required?(@blog, :title)) %><br/>
           <%= f.text_field :title, class: 'form-control' %><br/>
         </div>
         <div class='col-xs-10 no-padding'>
-          <%= f.label t('.body'), class: ('required' if required?(@blog, :body)) %><br/>
+          <%= f.label t('body'), class: ('required' if required?(@blog, :body)) %><br/>
           <%= f.text_area :body, class: 'form-control', rows: '10' %><br/>
         </div>
         
       </div>
     </div>
   </div>
-  <%= f.submit(@blog.new_record? ? t('.create'): t('.save'), class: 'btn btn-primary') %>
+  <%= f.submit(@blog.new_record? ? t('create'): t('save'), class: 'btn btn-primary') %>
 <% end %>

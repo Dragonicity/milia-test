@@ -11,7 +11,7 @@ module ApplicationHelper
       }, 
       {
         url: retreat_path,
-        title: t(:retreat)
+        title: t(:retreats)
       },
       {
         url: blogs_path,

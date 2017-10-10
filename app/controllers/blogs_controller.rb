@@ -18,10 +18,10 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.user = current_user 
     if @blog.save
-      flash[:notice] = t('blog_created')
+      flash[:notice] = "#{t('blog')} #{t('created')}"
       redirect_to blogs_path
     else
-      flash.now[:alert] = t('blog_not_created')
+      flash.now[:alert] = "#{t('blog')} #{t('not_created')}"
       render :new
     end
   end
@@ -31,17 +31,17 @@ class BlogsController < ApplicationController
 
    def update
     if @blog.update(blog_params)
-      flash[:notice] = t('blog_updated')
-      redirect_to blog_path(@blog)
+      flash[:notice] = "#{t('blog')} #{t('updated')}"
+      redirect_to blogs_path
     else
-      flash.now[:alert] = t('blog_not_updated')
+      flash.now[:alert] = "#{t('blog')} #{t('not_updated')}"
       render :edit
     end
   end
 
   def destroy
     @blog.destroy
-    flash[:notice] = t('blog_deleted')
+    flash[:notice] = "#{t('blog')} #{t('deleted')}"
     redirect_to blogs_path
   end
 
