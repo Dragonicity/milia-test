@@ -8,7 +8,12 @@ Rails.application.routes.draw do
     get '/terms_of_service',  to: 'pages#terms_of_service'
     get '/privacy_policy',    to: 'pages#privacy_policy'
 
-    resources :blogs
+    resources :blogs do 
+      member do 
+        get :toggle_status
+      end
+    end
+
     resources :contacts, only: [:new, :create]
   
     root to: 'pages#home'

@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
 
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
@@ -42,6 +42,11 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     flash[:notice] = "#{t(:blog)} #{t(:deleted)}"
+    redirect_to blogs_path
+  end
+
+  def toggle_status
+    @blog.draft? ? @blog.published! : @blog.draft!
     redirect_to blogs_path
   end
 
