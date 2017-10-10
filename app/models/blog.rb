@@ -5,4 +5,6 @@ class Blog < ApplicationRecord
   belongs_to :user
   belongs_to :topic
   validates_presence_of :title, :body
+
+  scope :recent_blogs, -> { order("created_at DESC") }
 end
