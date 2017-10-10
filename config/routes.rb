@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope "(:locale)" do
     devise_for :users
-    root 'pages#home'
+
     get 'pages/home'
     get '/about',             to: 'pages#about'
     get '/retreat',           to: 'pages#retreat'
@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
     resources :blogs
     resources :contacts, only: [:new, :create]
+  
+    root to: 'pages#home'
   end
 end

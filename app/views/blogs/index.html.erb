@@ -12,11 +12,9 @@
   <p><%= blog.status %></p>
   <p><%= blog.user.full_name %></p>
   <p><%= blog.created_at %></p>
-    <%= link_to t('show'), blog_path(blog),
-      class: "btn btn-xs btn-info"%>
-    <%= link_to t('edit'), edit_blog_path(blog), 
-      class: "btn btn-xs btn-primary"%>
-    <%= link_to t('delete'), blog_path(blog), 
+    <p><%= link_to t('edit'), edit_blog_path(blog), 
+      class: "btn btn-xs btn-primary"%></p>
+    <p><%= link_to t('delete'), blog_path(blog), 
       class: "btn btn-xs btn-danger", method: :delete, 
-      data: { confirm: t('are_you_sure') } %>
+      data: { confirm: t('are_you_sure') } %></p>
 <% end %>
