@@ -18,6 +18,7 @@ fr:
   delete:                 "Effacer"
   edit:                   "Modifier"
   email:                  "Courriel"
+  forgot_your_password:   "Mot de passe oublié?"
   home:                   "Page d'accueil"
   index:                  "Indice"
   message:                "Message"
