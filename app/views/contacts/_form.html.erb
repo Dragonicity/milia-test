@@ -1,31 +1,31 @@
 <div class="container">
   <div class="row">
-    <div class='col-lg-5'>
+    <div class="col-lg-5">
       <%= form_for @contact do |f| %>
-        <div class='form-group'>
-          <%= f.label t(:name), class: 'required' %><br/>
-          <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+        <div class="form-group">
+          <%= f.label t(:name), class: "required" %><br/>
+          <%= f.text_field :name, autofocus: true, class: "form-control" %>
         </div>
-        <div class='form-group'>
-          <%= f.label t(:email), class: 'required' %><br/>
-          <%= f.email_field :email, class: 'form-control' %>
+        <div class="form-group">
+          <%= f.label t(:email), class: "required" %><br/>
+          <%= f.email_field :email, class: "form-control" %>
         </div>
-        <div class='form-group'>
+        <div class="form-group">
           <%= f.label t(:phone) %><br/>
-          <%= f.text_field :phone, class: 'form-control' %>
+          <%= f.text_field :phone, class: "form-control" %>
         </div>
-        <div class='form-group'>
+        <div class="form-group">
           <%= f.label t(:subject) %><br/>
-          <%= f.text_field :subject, class: 'form-control' %>
+          <%= f.text_field :subject, class: "form-control" %>
         </div>
-        <div class='form-group'>
-          <%= f.label t(:message), class: 'required' %><br/>
-          <%= f.text_area :message, class: 'form-control', rows: 4 %>
+        <div class="form-group">
+          <%= f.label t(:message), class: "required" %><br/>
+          <%= f.text_area :message, class: "form-control", rows: 4 %>
         </div>
-        <%= f.submit t(:send), class: 'btn btn-primary' %>
+        <%= f.submit t(:send), class: "btn btn-primary" %>
       <% end %>
      </div>
-     <div class='col-lg-7'>
+     <div class="col-lg-7">
       <h3>Dragonicity Ltd</h3><br/>
       <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp; (852) 9380 6428 &nbsp;
       <i class="fa fa-phone fa-2x" aria-hidden="true"></i>&nbsp; (852) 2861 1786

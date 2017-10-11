@@ -6,5 +6,14 @@ class Blog < ApplicationRecord
   belongs_to :topic
   validates_presence_of :title, :body
 
-  scope :recent_blogs, -> { order("created_at DESC") }
+  scope :reverse_date_order, -> { order("created_at DESC") }
+
+  after_initialize :set_defaults
+
+  def set_defaults
+    self.thumb_nail ||= "http://placehold.it/350x200"
+    self.main_image ||= "http://placehold.it/350x200"
+    self.topic_id = Topic.last.id
+  end
+
 end

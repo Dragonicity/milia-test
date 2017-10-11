@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @blogs = Blog.recent_blogs
+    @blogs = Blog.reverse_date_order
   end
 
   def show

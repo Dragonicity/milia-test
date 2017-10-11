@@ -5,16 +5,18 @@
   </ul>
 </div>
 
-<% @blogs.each do |blog| %>
-  <p><%= link_to blog.title, blog_path(blog) %></p>
-  <p><%= blog.body %></p>
-  <p><%= image_tag blog.thumb_nail unless blog.thumb_nail.nil? %></p>
-  <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
-  <p><%= blog.user.full_name %></p>
-  <p><%= blog.created_at %></p>
-    <p><%= link_to t(:edit), edit_blog_path(blog), 
-      class: "btn btn-xs btn-primary"%></p>
-    <p><%= link_to t(:delete), blog_path(blog), 
-      class: "btn btn-xs btn-danger", method: :delete, 
-      data: { confirm: t(:are_you_sure) } %></p>
-<% end %>
+<div class="container">
+  <% @blogs.each do |blog| %>
+    <p><%= link_to blog.title, blog_path(blog) %></p>
+    <p><%= blog.body %></p>
+    <p><%= image_tag blog.thumb_nail unless blog.thumb_nail.nil? %></p>
+    <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
+    <p><%= blog.user.full_name %></p>
+    <p><%= blog.created_at %></p>
+      <p><%= link_to t(:edit), edit_blog_path(blog), 
+        class: "btn btn-xs btn-primary"%></p>
+      <p><%= link_to t(:delete), blog_path(blog), 
+        class: "btn btn-xs btn-danger", method: :delete, 
+        data: { confirm: t(:are_you_sure) } %></p>
+  <% end %>
+</div>
