@@ -10,6 +10,8 @@ fr:
   blog:                   "Blogue"
   body:                   "Corps de texte"
   brand:                  "Marque"
+  cancel_my_account:      "Annuler mon compte"
+  characters_minimum:     "caractères minimum"
   contact:                "Contact"
   copyright:              "Droits d'auteur"
   create:                 "Créer"
@@ -34,6 +36,7 @@ fr:
   terms_of_service:       "Conditions d'utilisation"
   title:                  "Titre"
   thumb_nail:             "La vignette"
+  to_confirm_changes:     "confirmer les changements"
   user:                   "Utilisateur"
   yay:                    "Oui"
 

@@ -10,6 +10,8 @@ en:
   blog:                   "Blog"
   body:                   "Body"
   brand:                  "Brand"
+  cancel_my_account:      "Cancel my Account"
+  characters_minimum:     "characters minimum"
   contact:                "Contact"
   copyright:              "Copyright"
   create:                 "Create"
@@ -34,6 +36,7 @@ en:
   terms_of_service:       "Terms of Service"
   title:                  "Title"
   thumb_nail:             "Thumb Nail"
+  to_confirm_changes:     "to confirm changes"
   user:                   "User"
   yay:                    "Yes"
 

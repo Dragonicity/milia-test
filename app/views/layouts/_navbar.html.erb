@@ -14,7 +14,11 @@
           <%= link_to(t('sign_up'), new_user_registration_path, class: "nav-link float-right") %>
         <% else %>
           <%= link_to(t('sign_out'),   destroy_user_session_path, method: :delete, class: "nav-link float-right") %>
-          <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 30)).html_safe, edit_user_registration_path, class: "nav-link float-right" %>
+          <% if current_page? edit_user_registration_path%>
+            <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 30)).html_safe, edit_user_registration_path, class: "nav-link float-right active" %>
+          <% else %>
+            <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 30)).html_safe, edit_user_registration_path, class: "nav-link float-right" %>
+          <% end %>
         <% end %>
       </div>
     </div>

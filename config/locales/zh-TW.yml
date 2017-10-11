@@ -8,6 +8,8 @@ zh-TW:
   blog:                   "博客"
   body:                   "文字體"
   brand:                  "牌"
+  cancel_my_account:      "取消我的帳戶"
+  characters_minimum:     "字數最小"
   contact:                "聯繫"
   copyright:              "版權"
   create:                 "創建"
@@ -32,6 +34,7 @@ zh-TW:
   terms_of_service:       "服務條款"
   title:                  "標題"
   thumb_nail:             "拇指指甲"
+  to_confirm_changes:     "確認更改"
   user:                   "用戶"
   yay:                    "是"
 

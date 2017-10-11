@@ -10,6 +10,8 @@ zh-CN:
   blog:                   "博客"
   body:                   "文字体"
   brand:                  "牌"
+  cancel_my_account:      "取消我的帐户"
+  characters_minimum:     "字数最小"
   contact:                "联系"
   copyright:              "版权"
   create:                 "创建"
@@ -34,6 +36,7 @@ zh-CN:
   terms_of_service:       "服务条款"
   title:                  "标题"
   thumb_nail:             "拇指指甲"
+  to_confirm_changes:     "确认更改"
   user:                   "用户"
   yay:                    "是"
 
