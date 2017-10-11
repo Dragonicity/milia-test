@@ -14,6 +14,14 @@ module ApplicationHelper
         title: t(:retreats)
       },
       {
+        url: services_path,
+        title: t(:services)
+      },
+      {
+        url: products_path,
+        title: t(:products)
+      },
+      {
         url: blogs_path,
         title: t(:blog)
       }

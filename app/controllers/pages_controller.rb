@@ -11,6 +11,12 @@ class PagesController < ApplicationController
   def retreat
   end
 
+  def services
+  end
+
+  def products
+  end
+
   def terms_of_service
   end
 
