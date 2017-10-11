@@ -12,7 +12,7 @@ class Blog < ApplicationRecord
 
   def set_defaults
     self.thumb_nail ||= "http://placehold.it/350x200"
-    self.main_image ||= "http://placehold.it/350x200"
+    self.main_image ||= "http://placehold.it/600x400"
     self.topic_id = Topic.last.id
   end
 
