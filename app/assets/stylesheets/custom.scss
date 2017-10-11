@@ -180,6 +180,28 @@ footer {
   color: $accent-color;
 }
 
+/* Devise Cards */
+
+.card .devise-conf-new {
+  width: 35rem;
+}
+
+.card .devise-login {
+  width: 25rem;
+  height: 30rem;
+  margin: o auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.card .devise-reg-edit {
+  height: 40rem;
+}
+
+.card .devise-reg-new {
+  height: 30rem;
+}
+
 /* miscellaneous */
 
 .locale {
@@ -191,8 +213,6 @@ label.required:after {
     content: " *";
     color: red;
 }
-
-/* universal */
 
 form {
   max-width: 100%;
