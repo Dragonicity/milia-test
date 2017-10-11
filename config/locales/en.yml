@@ -3,8 +3,10 @@ en:
   # Dictionary
 
   about:                  "About"
+  ago:                    "ago"
   all_rights_reserved:    "all rights reserved"
   are_you_sure:           "Are you sure?"
+  back_to_top:            "Back to top"
   blog:                   "Blog"
   body:                   "Body"
   brand:                  "Brand"
@@ -23,6 +25,7 @@ en:
   phone:                  "Phone"
   retreats:               "Retreats"
   privacy_policy:         "Privacy Policy"
+  Pubished:               "Published"
   save:                   "Save"
   send:                   "Send"
   show:                   "Show"

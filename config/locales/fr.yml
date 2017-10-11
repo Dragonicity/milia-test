@@ -3,8 +3,10 @@ fr:
 # Dictionary
 
   about:                  "Sur"
+  ago:                    "depuis"
   all_rights_reserved:    "tous les droits sont réservés"
   are_you_sure:           "Êtes-vous sûr?"
+  back_to_top:            "Retour au sommet"
   blog:                   "Blogue"
   body:                   "Corps de texte"
   brand:                  "Marque"
@@ -23,6 +25,7 @@ fr:
   phone:                  "Téléphone"
   retreats:               "Retraites"
   privacy_policy:         "Politique de confidentialité"
+  published:              "Publié"
   save:                   "Enregistrer"
   send:                   "Envoyer"
   show:                   "Montrer"

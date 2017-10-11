@@ -3,8 +3,10 @@ zh-CN:
   # Dictionary
 
   about:                  "关于"
+  ago:                    "前"
   all_rights_reserved:    "版权所有"
   are_you_sure:           "你确定？"
+  back_to_top:            "回到顶部"
   blog:                   "博客"
   body:                   "文字体"
   brand:                  "牌"
@@ -23,6 +25,7 @@ zh-CN:
   phone:                  "电话"
   retreats:               "撤退"
   privacy_policy:         "隐私政策"
+  published:              "发布时间"
   save:                   "保存"
   send:                   "发送"
   show:                   "显示"

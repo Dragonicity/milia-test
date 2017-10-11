@@ -1,8 +1,10 @@
 zh-TW:
 
   about:                  "關於"
+  ago:                    "前"
   all_rights_reserved:    "版權所有"
   are_you_sure:           "你確定？"
+  back_to_top:            "回到頂部"
   blog:                   "博客"
   body:                   "文字體"
   brand:                  "牌"
@@ -21,6 +23,7 @@ zh-TW:
   phone:                  "電話"
   retreats:               "撤退"
   privacy_policy:         "隱私政策"
+  published:              "發布時間"
   save:                   "保存"
   send:                   "發送"
   show:                   "顯示"
