@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
-<div class="container"> 
-  <div class="row">
-    <div class="col-md-12 no-padding">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-md-12 no-padding">
         <div class="alert alert-alert %>">
           <a href="#" class="close" data-dismiss="alert">&#215;</a>
           <h6>
@@ -13,9 +13,9 @@
             <% obj.errors.full_messages.each do | msg | %>
               <li><%= raw msg %></li>
             <% end %>
-          </ul>
+          </ul> 
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
