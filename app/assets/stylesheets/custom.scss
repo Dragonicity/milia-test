@@ -214,6 +214,17 @@ footer {
   
 }
 
+/* Subscription */
+
+.subscription-subtitle {
+  color: $secondary-text-color;
+  font-size: 20px;
+}
+
+.card .subscription {
+  width: 20rem;
+}
+
 /* miscellaneous */
 
 .locale {
