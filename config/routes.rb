@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       member do 
         get :toggle_status
       end
+      get 'page/:page', action: :index, on: :collection
     end
 
     resources :contacts, only: [:new, :create]

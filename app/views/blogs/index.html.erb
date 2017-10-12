@@ -6,7 +6,9 @@
 </div>
 
 <div class="col-sm-9">
+  <%= paginate @blogs %>
   <%= render @blogs %>
+  <%= paginate @blogs %>
 </div>
 
 <div class="col-sm-2 offset-sm-1">
