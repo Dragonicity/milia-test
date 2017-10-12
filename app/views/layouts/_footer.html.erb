@@ -1,5 +1,9 @@
 <footer class="footer">
+<% if params[:controller] == "blogs" && params[:action] == "index" %>
+  <div class="navbar navbar-default" role="navigation">
+<% else %>
   <div class="navbar navbar-default fixed-bottom" role="navigation">
+    <% end %>
     <div class="navbar-text col-12">
       <hr>
       <%= @copyright %> &nbsp; <%= t :copyright %> <%= link_to(" Dragonicity Ltd", 'http://www.dragonicity.com') %>, &nbsp; <%= t :all_rights_reserved %>
