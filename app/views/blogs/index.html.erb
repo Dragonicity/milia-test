@@ -9,18 +9,24 @@
       </li>
   </ul>
 </div>
-
-<div class="col-sm-9">
-  <%= paginate @blogs %>
-  <%= render @blogs %>
-  <%= paginate @blogs %>
+<div class="container-fluid">
+  <br />
+  <div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-8 col-md-8">
+      <p class="float-right d-md-none">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+        <%= paginate @blogs %> <br />
+        <%= render @blogs %>
+        <%= paginate @blogs %>
+    </div>
+    <div class="col-3 col-md-3 sidebar-offcanvas" id="sidebar">
+      <div class="col-sm-2 offset-sm-1">
+        <%= render 'blog_sidebar' %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div class="col-sm-2 offset-sm-1">
-  <%= render 'blog_sidebar' %>
-</div>
-
-
 <div class="container">
   <%= link_to t(:back_to_top), blogs_path %>
 </div>

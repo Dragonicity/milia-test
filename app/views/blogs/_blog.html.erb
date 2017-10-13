@@ -1,14 +1,23 @@
-<p><%= image_tag blog.thumb_nail unless blog.thumb_nail.nil? %></p>
-<p><%= link_to blog.title, blog_path(blog) %></p>
-<p><%= blog.user.full_name %></p>
-<p><%= t(:published) %> <%= distance_of_time_in_words(blog.created_at, Time.now) %> <%= t(:ago) %></p>
-<p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
-  
-<% if logged_in?(:site_admin) %>
-  <ul class="actions">
-  <li><%= link_to t(:edit), edit_blog_path(blog), class: "btn btn-primary" %></li>
-  <li><%= link_to t(:delete), blog_path(blog), class: "btn btn-danger", 
+<div class="row">
+<div class="card blog">
+  <p><%= image_tag blog.thumb_nail, class: "card-img-top" unless blog.thumb_nail.nil? %></p>
+  <div class="card-body">
+    <h4 class="card-title"><%= link_to blog.title, blog_path(blog) %></h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= blog.user.full_name %></li>
+    <li class="list-group-item"><%= t(:published) %> <%= distance_of_time_in_words(blog.created_at, Time.now) %> <%= t(:ago) %></li>
+    <li class="list-group-item"><%= link_to blog.status, toggle_status_blog_path(blog) %></li>
+  </ul>
+  <div class="card-body">
+    <% if logged_in?(:site_admin) %>
+      <ul class="actions">
+        <li><%= link_to t(:edit), edit_blog_path(blog), class: "btn btn-primary" %></li>
+        <li><%= link_to t(:delete), blog_path(blog), class: "btn btn-danger", 
             method: :delete, data: { confirm: t(:are_you_sure) } %></li>
-</ul>
-<% end %>
-<p><%= sanitize blog.body %></p>
+      </ul>
+    <% end %>
+  </div>
+</div>
+</div>
+<br />
