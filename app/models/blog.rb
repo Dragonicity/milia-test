@@ -4,6 +4,7 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
   belongs_to :user
   belongs_to :topic
+  has_many :comments, dependent: :destroy
   validates_presence_of :title, :body
 
   scope :reverse_date_order, -> { order("created_at DESC") }

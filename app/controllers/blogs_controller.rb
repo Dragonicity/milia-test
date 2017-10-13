@@ -12,6 +12,13 @@ class BlogsController < ApplicationController
   end
 
   def show
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+      @seo_keywords = @blog.title
+    else
+      redirect_to blogs_path, notice: "You are not authorised to see this page"
+    end
   end
 
   def new
