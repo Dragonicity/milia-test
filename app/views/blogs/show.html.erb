@@ -13,8 +13,8 @@
 <div class="container">
   <%= image_tag @blog.main_image %>
   <h4><%= @blog.title %></h4>
-  <p><%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
   <p><%= @blog.user.full_name %></p>
   <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %></p>
+  <p><%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
   <p><%= @blog.body %></p>  
 </div>

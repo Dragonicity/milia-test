@@ -120,6 +120,16 @@ a.nav-link:focus {
   background-color: transparent;
 }
 
+ul.actions {
+  @extend .list-unstyled;
+  @extend .list-inline;
+  margin-bottom: 20px;
+  bottom: -2px;
+  right: 0px;
+  width: 1000px;
+  text-align: left;
+}
+
 /* header */
 
 .page-header {
@@ -132,16 +142,9 @@ a.nav-link:focus {
     text-align: left;
     max-width: 100%;
   }
-}
-
-ul.actions {
-  @extend .list-unstyled;
-  @extend .list-inline;
-  margin-bottom: 20px;
-  bottom: -2px;
-  right: 0px;
-  width: 1000px;
+  ul.actions {  
   text-align: right;
+  }
 }
 
 /* footer */
@@ -159,7 +162,7 @@ footer {
       color: $link;
       &:hover {
        color: $visited_link;
-    }
+      }
     }
   }
 }
@@ -276,15 +279,7 @@ table td {
 }
 
 
-ul.actions {
-  @extend .list-unstyled;
-  @extend .list-inline;
-  margin-bottom: 20px;
-  bottom: -2px;
-  right: 0px;
-  width: 1000px;
-  text-align: right;
-}
+
 
 .field_with_errors input,
 .field_with_errors textarea {
