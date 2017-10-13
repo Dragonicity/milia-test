@@ -13,6 +13,7 @@ class User < ApplicationRecord
   validates_presence_of :first_name, :last_name
 
   has_many :blogs
+  has_many :comments, dependent: :destroy
 
   def full_name
     "#{first_name} #{last_name}"

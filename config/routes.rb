@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   scope "(:locale)" do
     devise_for :users
 
