@@ -234,6 +234,32 @@ footer {
 
 }
 
+.card .comment {
+  margin-top: 15px;
+}
+
+.comment-body {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-attribution {
+  font-size: .8em;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-name {
+  font-weight: 700;
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+
 /* Subscription */
 
 .subscription-subtitle {
