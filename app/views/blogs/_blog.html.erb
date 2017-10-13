@@ -5,16 +5,10 @@
 <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
   
 <% if logged_in?(:site_admin) %>
-  <ul class="actions text-align-left">
+  <ul class="actions">
   <li><%= link_to t(:edit), edit_blog_path(blog), class: "btn btn-primary" %></li>
   <li><%= link_to t(:delete), blog_path(blog), class: "btn btn-danger", 
             method: :delete, data: { confirm: t(:are_you_sure) } %></li>
 </ul>
 <% end %>
-
-
-
-
-
-
-<p><%= blog.body %></p>
+<p><%= sanitize blog.body %></p>

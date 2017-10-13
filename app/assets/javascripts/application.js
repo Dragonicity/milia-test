@@ -14,5 +14,6 @@
 //= require popper
 //= require rails-ujs
 //= require turbolinks
+//= require trix
 //= require_tree .
 //= require bootstrap-sprockets

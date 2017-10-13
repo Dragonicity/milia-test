@@ -126,7 +126,7 @@ ul.actions {
   margin-bottom: 20px;
   bottom: -2px;
   right: 0px;
-  width: 1000px;
+  
   text-align: left;
 }
 
@@ -134,16 +134,25 @@ ul.actions {
 
 .page-header {
   position: relative;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   &:first-child {
     margin-top: 20px;
   }
   h1 {
     text-align: left;
-    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline;
   }
-  ul.actions {  
-  text-align: right;
+  ul.actions { 
+    display: inline;
+    padding: 0 0 0 50px;
+    margin: 0;
+    float: right;
+    li {
+      list-style: none;
+      text-align: right;
+    }
   }
 }
 
@@ -187,7 +196,7 @@ footer {
   color: $accent-color;
 }
 
-/* Devise Cards */
+/* Cards */
 
 .card .devise-conf-new {
   width: 35rem;
@@ -277,9 +286,6 @@ table td {
   max-width: 740px;
   word-wrap: normal;
 }
-
-
-
 
 .field_with_errors input,
 .field_with_errors textarea {
