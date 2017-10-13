@@ -9,7 +9,6 @@
     <% end %>
   </ul>
 </div>
-
 <div class="container">
   <%= image_tag @blog.main_image %>
   <h4><%= @blog.title %></h4>
@@ -17,15 +16,6 @@
   <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %></p>
   <p><%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
   <p><%= sanitize @blog.body %></p> 
-
-  <%= form_for @comment, url: "#" do |f| %>
-    <div class="form-group">
-      <%= f.label :content %>
-      <%= f.text_area :content, class: "form-control" %>
-    </div>
-    <%= f.submit t(:save), class: "btn btn-primary" %>
-  <% end %>
-
+  <%= render 'comments/comment_form' %>
   <%= render @blog.comments %>
-  
 </div>
