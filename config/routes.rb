@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     end
 
     resources :contacts, only: [:new, :create]
+    resources :topics, only: [:index, :show]
   
     mount ActionCable.server => '/cable'
   

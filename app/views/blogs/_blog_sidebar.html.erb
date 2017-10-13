@@ -1,1 +1,8 @@
-<h4> Topics </h4>
+<div class="col-sm-3 offset-sm-1 blog-sidebar">
+  <div class="sidebar-module">
+    <h4>Topics</h4>
+    <% @sidebar_topics.each do |topic| %>
+      <%= link_to topic.title, topic_path(topic) %><br/>
+    <% end %>
+  </div>
+</div>
