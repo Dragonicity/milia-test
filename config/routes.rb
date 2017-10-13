@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
   scope "(:locale)" do
     devise_for :users
 
@@ -19,6 +18,8 @@ Rails.application.routes.draw do
     end
 
     resources :contacts, only: [:new, :create]
+  
+    mount ActionCable.server => '/cable'
   
     root to: 'pages#home'
   end
