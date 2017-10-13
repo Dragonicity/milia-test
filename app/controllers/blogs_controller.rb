@@ -4,7 +4,11 @@ class BlogsController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @blogs = Blog.reverse_date_order.page(params[:page]).per(3)
+    if logged_in?(:site_admin)
+      @blogs = Blog.reverse_date_order.page(params[:page]).per(3)
+    else
+        @blogs = Blog.published.reverse_date_order.page(params[:page]).per(3)
+    end
   end
 
   def show
