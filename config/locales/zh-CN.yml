@@ -29,6 +29,7 @@ zh-CN:
   retreats:               "撤退"
   privacy_policy:         "隐私政策"
   products:               "制品"
+  publish:                "发布"
   published:              "发布时间"
   save:                   "保存"
   send:                   "发送"
@@ -40,6 +41,7 @@ zh-CN:
   title:                  "标题"
   thumb_nail:             "拇指指甲"
   to_confirm_changes:     "确认更改"
+  unpublish:              "取消发布"
   user:                   "用户"
   yay:                    "是"
 

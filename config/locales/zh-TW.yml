@@ -27,6 +27,7 @@ zh-TW:
   retreats:               "撤退"
   privacy_policy:         "隱私政策"
   products:               "製品"
+  publish:                "發布"
   published:              "發布時間"
   save:                   "保存"
   send:                   "發送"
@@ -38,6 +39,7 @@ zh-TW:
   title:                  "標題"
   thumb_nail:             "拇指指甲"
   to_confirm_changes:     "確認更改"
+  unpublish:              "取消發布"
   user:                   "用戶"
   yay:                    "是"
 

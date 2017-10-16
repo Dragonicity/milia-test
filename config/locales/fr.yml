@@ -29,6 +29,7 @@ fr:
   products:               "Produits"
   retreats:               "Retraites"
   privacy_policy:         "Politique de confidentialité"
+  publish:                "Publier"
   published:              "Publié"
   save:                   "Enregistrer"
   send:                   "Envoyer"
@@ -40,6 +41,7 @@ fr:
   title:                  "Titre"
   thumb_nail:             "La vignette"
   to_confirm_changes:     "confirmer les changements"
+  unpublish:              "Dépublier"
   user:                   "Utilisateur"
   yay:                    "Oui"
 
