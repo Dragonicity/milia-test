@@ -20,7 +20,7 @@
   <%= image_tag @blog.main_image, width: "100%" %>
   <h4><%= @blog.title %></h4>
   <p><%= @blog.user.full_name %></p>
-  <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= @blog.comments.count %></i> </p>
+  <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= @blog.comments.count if @blog.comments.count > 0 %></i> </p>
   <p><%= sanitize @blog.body %></p> 
   <%= render 'comments/comment_form' %>
    <div id="comments" data-blog-id="<%= @blog.id %>" >
