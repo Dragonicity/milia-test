@@ -1,0 +1,109 @@
+fr:
+ 
+# Dictionary
+
+  about:                  "Sur"
+  ago:                    "depuis"
+  all_rights_reserved:    "tous les droits sont réservés"
+  are_you_sure:           "Êtes-vous sûr?"
+  back_to_top:            "Retour au sommet"
+  blog:                   "Blogue"
+  body:                   "Corps de texte"
+  brand:                  "Marque"
+  cancel_my_account:      "Annuler mon compte"
+  characters_minimum:     "caractères minimum"
+  contact:                "Contact"
+  copyright:              "Droits d'auteur"
+  create:                 "Créer"
+  delete:                 "Effacer"
+  draft:                  "Brouillon"
+  edit:                   "Modifier"
+  email:                  "Courriel"
+  home:                   "Page d'accueil"
+  index:                  "Indice"
+  message:                "Message"
+  name:                   "Nom"
+  nay:                    "Non"
+  new:                    "Nouveau"
+  phone:                  "Téléphone"
+  products:               "Produits"
+  retreats:               "Retraites"
+  privacy_policy:         "Politique de confidentialité"
+  publish:                "Publier"
+  published:              "Publié"
+  save:                   "Enregistrer"
+  send:                   "Envoyer"
+  services:               "Services"
+  show:                   "Montrer"
+  status:                 "Statut"
+  subject:                "Assujettir"
+  terms_of_service:       "Conditions d'utilisation"
+  title:                  "Titre"
+  thumb_nail:             "La vignette"
+  to_confirm_changes:     "confirmer les changements"
+  unpublish:              "Dépublier"
+  user:                   "Utilisateur"
+  yay:                    "Oui"
+
+  # Controller notice and alert messages
+
+  created:                "créé avec succès"
+  not_created:            "n'a pas été créé"
+  updated:                "mis à jour avec succès"
+  not_updated:            "n'a pas été mis à jour"
+  deleted:                "supprimé avec succès"    
+  contact_message_sent:   "Votre message a été envoyé"
+  contact_message_error:  "Une erreur est survenue avec votre message"
+
+  # Navbar components
+
+  edit_profile:           "Modifier le profil"
+  sign_up:                "S'inscrire"
+  sign_in:                "Se connecter"
+  sign_out:               "Se déconnecter"
+
+  # View titles
+
+  blog_edit_title:        "Modifier le blogue"
+  blog_index_title:       "Blogues"
+  blog_new_title:         "Nouveau blogue"
+  blog_show_title:        "Blogue"
+  contact_new_title:      "Contact"
+  
+  # Standard contents
+
+  activerecord:
+    models:
+      codelist:               "liste des codes"
+      codelistvalue:          "code valeur de liste"
+      code_list_translation:  "traduction de la liste des codes"
+      code_list_value_translation: "traduction de la valeur de la liste de codes"
+      contact:                "contact"
+      ticket:                 "billet"
+      user:                   "utilisateur"
+    attributes:
+      ticket:
+        user:                 "Utilisateur"
+        ticket_type:          "Type de billet"
+        state:                "Etat"
+        name:                 "Nom"
+        priority:             "Priorité"
+        description:          "La description"
+        comments:             "Commentaires"
+      user:
+        first_name:           "Prénom"
+        last_name:            "Nom de famille"
+        admin:                "Admin"
+        current_password: Mot de passe actuel
+        email: Courriel
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        remember_me: Se souvenir de moi
+        reset_password_token: 
+        unlock_token: Clé de déblocage
+      contact:
+        name:                 "Nom"
+        email:                "Courriel"
+        phone:                "Téléphone"
+        subject:              "Assujettir"
+        message:              "Message"

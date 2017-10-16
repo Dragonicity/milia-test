@@ -1,10 +1,10 @@
 user = User.new
-user.email = "mark.nelson@dragonicity.com"
-user.password = "123456"
+user.email                 = "mark.nelson@dragonicity.com"
+user.password              = "123456"
 user.password_confirmation = '123456'
-user.first_name = "Mark"
-user.last_name = "Nelson"
-user.roles = "site_admin"
+user.first_name            = "Mark"
+user.last_name             = "Nelson"
+user.roles                 = "site_admin"
 user.save!
 
 Topic.create!(title: "Retreats")

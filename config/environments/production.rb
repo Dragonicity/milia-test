@@ -90,4 +90,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'dragonicity.com', port: 3000 }
+
+
+  config.action_cable.allowed_request_origins = ['https://milia-test.herokuapp.com', 'http://milia-test.herokuapp.com']
+  config.action_cable.url = "wss://milia-test.herokuapp.com/cable"
 end
