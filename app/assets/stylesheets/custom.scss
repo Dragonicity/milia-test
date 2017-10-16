@@ -330,7 +330,7 @@ a.btn {
 
 /* Note CSS does not like 'close' to be used which is why it is 'closed' */
 
-a.new, a.edit, a.delete, a.index, a.archive, a.import, a.export, a.approve, a.reject, a.closed, a.reopen {
+a.new, a.edit, a.delete, a.index, a.archive, a.import, a.export, a.approve, a.reject, a.closed, a.reopen, a.publish {
   @extend .btn;
   &:before {
     font-family: "FontAwesome";
@@ -413,7 +413,14 @@ a.reopen {
   @extend .btn-primary;
   &:before {
     @extend .fa-recycle;
-  } 
+  }
+}
+
+a.publish {
+  @extend .btn-dark;
+  &:before {
+    @extend .fa-file-text;
+  }  
 }
 
 /* Show view table attributes */

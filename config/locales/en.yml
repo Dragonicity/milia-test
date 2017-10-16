@@ -29,7 +29,8 @@ en:
   retreats:               "Retreats"
   privacy_policy:         "Privacy Policy"
   products:               "Products"
-  Pubished:               "Published"
+  publish:                "Publish"
+  pubished:               "Published"
   save:                   "Save"
   send:                   "Send"
   services:               "Services"
@@ -40,6 +41,7 @@ en:
   title:                  "Title"
   thumb_nail:             "Thumb Nail"
   to_confirm_changes:     "to confirm changes"
+  unpublish:              "Unpublish"
   user:                   "User"
   yay:                    "Yes"
 
