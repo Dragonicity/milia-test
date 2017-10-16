@@ -1,7 +1,6 @@
 <div class="page-header">
   <%= render 'shared/page_title', title: t(:blog_show_title) %>
   <ul class="actions">
-    
     <li><%= link_to blog_status_text(@blog), toggle_status_blog_path(@blog), class: "publish" %></li>
     <li><%= link_to t(:index),  blogs_path, class: "index" %></li>
     <% if logged_in?(:site_admin) %>
@@ -23,7 +22,7 @@
   <%= image_tag @blog.main_image %>
   <h4><%= @blog.title %></h4>
   <p><%= @blog.user.full_name %></p>
-  <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %></p>
+  <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= @blog.comments.count %></i> </p>
   <p><%= sanitize @blog.body %></p> 
   <%= render 'comments/comment_form' %>
    <div id="comments" data-blog-id="<%= @blog.id %>" >
