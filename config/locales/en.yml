@@ -42,6 +42,8 @@ en:
   thumb_nail:             "Thumb Nail"
   to_confirm_changes:     "to confirm changes"
   unpublish:              "Unpublish"
+  upload_main_image_file: "Upload main image file"
+  upload_thumb_nail_file: "Upload thumb nail file"
   user:                   "User"
   yay:                    "Yes"
 

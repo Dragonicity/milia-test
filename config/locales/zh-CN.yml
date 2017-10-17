@@ -42,6 +42,8 @@ zh-CN:
   thumb_nail:             "拇指指甲"
   to_confirm_changes:     "确认更改"
   unpublish:              "取消发布"
+  upload_main_image_file: "上传主图像文件"
+  upload_thumb_nail_file: "上传缩略图图像文件"
   user:                   "用户"
   yay:                    "是"
 

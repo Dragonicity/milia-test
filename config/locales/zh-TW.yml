@@ -40,6 +40,8 @@ zh-TW:
   thumb_nail:             "拇指指甲"
   to_confirm_changes:     "確認更改"
   unpublish:              "取消發布"
+  upload_main_image_file: "上傳主圖像文件"
+  upload_thumb_nail_file: "上傳縮略圖圖像文件"
   user:                   "用戶"
   yay:                    "是"
 

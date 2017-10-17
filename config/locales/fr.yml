@@ -42,6 +42,8 @@ fr:
   thumb_nail:             "La vignette"
   to_confirm_changes:     "confirmer les changements"
   unpublish:              "Dépublier"
+  upload_main_image_file: "Télécharger le fichier image principal"
+  upload_thumb_nail_file: "Télécharger l'image de la vignette"
   user:                   "Utilisateur"
   yay:                    "Oui"
 
