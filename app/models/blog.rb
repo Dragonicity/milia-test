@@ -7,16 +7,8 @@ class Blog < ApplicationRecord
   has_many :comments, dependent: :destroy
   validates_presence_of :title, :body
 
-  mount_uploader :thumb_nail, BlogUploader
   mount_uploader :main_image, BlogUploader
+  mount_uploader :thumb_nail, BlogUploader
 
   scope :reverse_date_order, -> { order("created_at DESC") }
-
-  after_initialize :set_defaults
-
-  def set_defaults
-    self.thumb_nail ||= "http://placehold.it/350x200"
-    self.main_image ||= "http://placehold.it/600x400"
-  end
-
 end
