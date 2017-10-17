@@ -337,7 +337,7 @@ a.btn {
 
 /* Note CSS does not like 'close' to be used which is why it is 'closed' */
 
-a.new, a.edit, a.delete, a.index, a.archive, a.import, a.export, a.approve, a.reject, a.closed, a.reopen, a.publish, a.checkout {
+a.new, a.edit, a.delete, a.index, a.archive, a.import, a.export, a.approve, a.reject, a.closed, a.reopen, a.publish, a.add_to_cart, a.checkout, a.empty_cart {
   @extend .btn;
   &:before {
     font-family: "FontAwesome";
@@ -430,10 +430,24 @@ a.publish {
   }  
 }
 
+a.add_to_cart {
+  @extend .btn-primary;
+  &:before {
+    @extend .fa-cart-plus;
+  }  
+}
+
 a.checkout {
   @extend .btn-success;
   &:before {
     @extend .fa-shopping-cart;
+  }  
+}
+
+a.empty_cart {
+  @extend .btn-danger;
+  &:before {
+    @extend .fa-cart-arrow-down;
   }  
 }
 

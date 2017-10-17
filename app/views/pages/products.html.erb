@@ -21,7 +21,7 @@
             <li class="list-group-item">USD 100</li>
           </ul>
           <div class="card-body">
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="add_to_cart"><%= t(:add_to_cart) %></a>
           </div>
         </div><!--/span-->
         <div class=" card col-4 col-lg-4 mr-1 mb-1">
@@ -102,7 +102,7 @@
           <p> </p> <br />
           <p> </p> <br />
           <%= link_to t(:checkout), new_charge_path, class: "checkout mr-1" %>
-          <%= link_to t(:empty_cart), products_path, class: "delete", 
+          <%= link_to t(:empty_cart), products_path, class: "empty_cart", 
               method: :delete, data: { confirm: t(:are_you_sure) } %>
         </div>
       </div>
