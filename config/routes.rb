@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'purchases/show'
+
   scope "(:locale)" do
     devise_for :users
 
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
     resources :contacts, only: [:new, :create]
     resources :topics, only: [:index, :show]
     resources :charges
+    resources :purchases, only: [:show]
 
     mount ActionCable.server => '/cable'
   
