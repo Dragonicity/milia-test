@@ -19,7 +19,8 @@ Rails.application.routes.draw do
 
     resources :contacts, only: [:new, :create]
     resources :topics, only: [:index, :show]
-  
+    resources :charges
+
     mount ActionCable.server => '/cable'
   
     root to: 'pages#home'

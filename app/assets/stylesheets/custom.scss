@@ -337,7 +337,7 @@ a.btn {
 
 /* Note CSS does not like 'close' to be used which is why it is 'closed' */
 
-a.new, a.edit, a.delete, a.index, a.archive, a.import, a.export, a.approve, a.reject, a.closed, a.reopen, a.publish {
+a.new, a.edit, a.delete, a.index, a.archive, a.import, a.export, a.approve, a.reject, a.closed, a.reopen, a.publish, a.checkout {
   @extend .btn;
   &:before {
     font-family: "FontAwesome";
@@ -427,6 +427,13 @@ a.publish {
   @extend .btn-dark;
   &:before {
     @extend .fa-file-text;
+  }  
+}
+
+a.checkout {
+  @extend .btn-success;
+  &:before {
+    @extend .fa-shopping-cart;
   }  
 }
 

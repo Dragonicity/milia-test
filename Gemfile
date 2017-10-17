@@ -28,8 +28,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.2'
-
-gem 'stripe', '>= 3.5.3'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -7,7 +7,7 @@
   </div>
   <br />
   <div class="row row-offcanvas row-offcanvas-right">
-    <div class="col-8 col-md-8">
+    <div class="col-7 col-md-7">
       <p class="float-right d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
       </p>
@@ -87,7 +87,7 @@
       </div><!--/row-->
     </div><!--/span-->
 
-    <div class="col-4 col-md-4 sidebar-offcanvas" id="sidebar">
+    <div class="col-5 col-md-5 sidebar-offcanvas" id="sidebar">
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Shopping Cart</h4>
@@ -101,8 +101,9 @@
           <p> </p> <br />
           <p> </p> <br />
           <p> </p> <br />
-          <a href="#" class="btn btn-success mr-1">Checkout</a>
-          <a href="#" class="btn btn-danger">Empty Cart</a>
+          <%= link_to t(:checkout), new_charge_path, class: "checkout mr-1" %>
+          <%= link_to t(:empty_cart), products_path, class: "delete", 
+              method: :delete, data: { confirm: t(:are_you_sure) } %>
         </div>
       </div>
     </div><!--/span-->
