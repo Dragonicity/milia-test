@@ -209,6 +209,34 @@ footer {
   
 }
 
+.card-container {
+
+}
+
+.card .blog {
+   margin-bottom: 20px;
+}
+
+.card .comment {
+  margin-top: 15px;
+}
+
+.comment-body {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-attribution {
+  font-size: .8em;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-name {
+  font-weight: 700;
+}
+
 .card .devise-conf-new {
   width: 30rem;
 }
@@ -240,32 +268,6 @@ footer {
 .card .devise-unlk-new {
   
 }
-
-.card .blog {
-  width: 20rem;
-}
-
-.card .comment {
-  margin-top: 15px;
-}
-
-.comment-body {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.comment-attribution {
-  font-size: .8em;
-  font-style: italic;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.comment-name {
-  font-weight: 700;
-}
-
-/* Subscription */
 
 .subscription-subtitle {
   color: $secondary-text-color;
