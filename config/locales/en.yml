@@ -3,6 +3,7 @@ en:
   # Dictionary
 
   about:                  "About"
+  actions:                "Actions"
   add_to_cart:            "Add to Cart"
   ago:                    "ago"
   all_rights_reserved:    "all rights reserved"
@@ -18,6 +19,7 @@ en:
   copyright:              "Copyright"
   create:                 "Create"
   delete:                 "Delete"
+  description:            "Description"
   draft:                  "Draft"
   edit:                   "Edit"
   email:                  "Email"
@@ -29,11 +31,12 @@ en:
   nay:                    "No"
   new:                    "New"
   phone:                  "Phone"
-  retreats:               "Retreats"
+  price:                  "Price"
   privacy_policy:         "Privacy Policy"
   products:               "Products"
   publish:                "Publish"
   pubished:               "Published"
+  retreats:               "Retreats"
   save:                   "Save"
   send:                   "Send"
   services:               "Services"
@@ -74,6 +77,10 @@ en:
   blog_new_title:         "New blog"
   blog_show_title:        "Blog"
   contact_new_title:      "Contact"
+  product_edit_title:     "Edit product"
+  product_index_title:    "Products"
+  product_new_title:      "New Product"
+  product_show_title:     "Product"
 
   # Kaminari Pagination
 

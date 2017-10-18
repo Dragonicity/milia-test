@@ -1,6 +1,7 @@
 zh-TW:
 
   about:                  "關於"
+  actions:                "操作"
   add_to_cart:            "添加到購物車"
   ago:                    "前"
   all_rights_reserved:    "版權所有"
@@ -16,6 +17,7 @@ zh-TW:
   copyright:              "版權"
   create:                 "創建"
   delete:                 "刪除"
+  description:            "描述"
   draft:                  "草案"
   edit:                   "編輯"
   email:                  "電子郵件"
@@ -27,11 +29,12 @@ zh-TW:
   nay:                    "沒有"
   new:                    "新"
   phone:                  "電話"
-  retreats:               "撤退"
+  price:                  "價錢"
   privacy_policy:         "隱私政策"
   products:               "製品"
   publish:                "發布"
   published:              "發布時間"
+  retreats:               "撤退"
   save:                   "保存"
   send:                   "發送"
   services:               "服務"
@@ -72,6 +75,10 @@ zh-TW:
   blog_new_title:         "新博客"
   blog_show_title:        "博客"
   contact_new_title:      "聯繫"
+  product_edit_title:     "編輯產品"
+  product_index_title:    "製品"
+  product_new_title:      "新產品"
+  product_show_title:     "產品"
   
   # Standard contents
 

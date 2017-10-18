@@ -3,6 +3,7 @@ fr:
 # Dictionary
 
   about:                  "Sur"
+  actions:                "Actes"
   add_to_cart:            "Ajouter au panier"
   ago:                    "depuis"
   all_rights_reserved:    "tous les droits sont réservés"
@@ -18,6 +19,7 @@ fr:
   copyright:              "Droits d'auteur"
   create:                 "Créer"
   delete:                 "Effacer"
+  description:            "La description"
   draft:                  "Brouillon"
   edit:                   "Modifier"
   email:                  "Courriel"
@@ -29,11 +31,12 @@ fr:
   nay:                    "Non"
   new:                    "Nouveau"
   phone:                  "Téléphone"
-  products:               "Produits"
-  retreats:               "Retraites"
+  price:                  "Prix"
   privacy_policy:         "Politique de confidentialité"
+  products:               "Produits"
   publish:                "Publier"
   published:              "Publié"
+  retreats:               "Retraites"
   save:                   "Enregistrer"
   send:                   "Envoyer"
   services:               "Services"
@@ -74,6 +77,10 @@ fr:
   blog_new_title:         "Nouveau blogue"
   blog_show_title:        "Blogue"
   contact_new_title:      "Contact"
+  product_edit_title:     "Modifier le produit"
+  product_index_title:    "Produits"
+  product_new_title:      "Nouveau produit"
+  product_show_title:     "Produit"
   
   # Standard contents
 
