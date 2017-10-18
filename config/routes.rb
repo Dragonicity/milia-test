@@ -19,11 +19,12 @@ Rails.application.routes.draw do
       get 'page/:page', action: :index, on: :collection
     end
 
-    resources :contacts, only: [:new, :create]
-    resources :topics, only: [:index, :show]
     resources :charges
+    resources :contacts, only: [:new, :create]
+    resources :products
     resources :purchases, only: [:show]
     resources :subscriptions
+    resources :topics, only: [:index, :show]
 
     mount ActionCable.server => '/cable'
   
