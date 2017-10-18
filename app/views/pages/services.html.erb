@@ -63,7 +63,7 @@
     </div>
 
 
-<%= form_tag charges_path, id: 'subscribeForm' do %>
+<%= form_tag subscriptions_path, id: 'subscribeForm' do %>
   <% if flash[:error].present? %>
     <div id="error_explanation">
       <p><%= flash[:error] %></p>
