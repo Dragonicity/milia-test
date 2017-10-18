@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :topics, only: [:index, :show]
     resources :charges
     resources :purchases, only: [:show]
+    resources :subscriptions
 
     mount ActionCable.server => '/cable'
   
