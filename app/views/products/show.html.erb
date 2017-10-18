@@ -1,0 +1,17 @@
+<div class="page-header">
+  <%= render 'shared/page_title', title: t(:product_show_title) %>
+  <ul class="actions">
+    <li><%= link_to t(:index),  products_path, class: "index" %></li>
+    <% if logged_in?(:site_admin) %>
+      <li><%= link_to t(:edit),   edit_product_path(@product), class: "edit" %></li>
+      <li><%= link_to t(:delete), product_path, class: "delete", 
+              method: :delete, data: { confirm: t(:are_you_sure) } %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="container">
+  <%= image_tag product_img(@product.main_image, 'main'), width: "100%" %>
+  <h4><%= @product.title %></h4>
+  <p><%= sanitize @product.description %></p>
+  <p><%= @product.price %></p>
+</div>

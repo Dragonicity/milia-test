@@ -36,6 +36,6 @@
     <%= f.hidden_field :body, class: 'form-control', rows: '15', id: "blog_body" %><br/>
     <trix-editor input="blog_body"></trix-editor>
   </div>
-   <%= f.submit(@blog.new_record? ? t(:create): t(:save), class: 'btn btn-primary') %>
+  <%= f.submit(@blog.new_record? ? t(:create): t(:save), class: 'btn btn-primary') %>
   </div>
 <% end %>

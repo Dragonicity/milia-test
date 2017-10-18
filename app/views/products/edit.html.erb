@@ -1,0 +1,12 @@
+%= render 'shared/errors', obj: @product %>
+<div class="page-header">
+  <%= render 'shared/page_title', title: t(:product_edit_title) %>
+  <ul class="actions">
+    <li><%= link_to t(:index), products_path, class: "index" %></li>
+    <li><%= link_to t(:delete), product_path, class: "delete", 
+            method: :delete, data: { confirm: t(:are_you_sure) } %></li>
+  </ul>
+</div>
+<div class="container">
+  <%= render 'form' %>
+</div>

@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= render 'shared/page_title', title: t(:product_index_title) %>
+  <ul class="actions">
+    <li><%= link_to t('.new'), new_product_path, class: "new" %></li>
+  </ul>
+</div>
+<table class="table table-bordered table-striped" id="products">
+  <thead>
+    <tr>
+      <%= t(:title)) %>
+      <%= t(:price)) %>   
+      <th class="fit"><%= t(:actions) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product|  %>
+      <tr>
+        <td <%= product.title %>></td>
+        <td <%= product.price %>></td>
+        <td class="fit">
+          <%= link_to t(:show), product_path(product),
+            class: "btn btn-xs btn-info"%>
+          <%= link_to t(:edit), edit_product_path(product), 
+            class: "btn btn-xs btn-primary"%>
+          <%= link_to t(:delete), product_path(product), 
+            class: "btn btn-xs btn-danger", method: :delete, 
+            data: { confirm: t('.are_you_sure') } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
