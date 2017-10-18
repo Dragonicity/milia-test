@@ -26,8 +26,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # For development mode use letter opener to open emails int hebrowser
-
+  # For development mode use letter opener to open emails in the browser
   config.action_mailer.delivery_method = :letter_opener
 
   # Don't care if the mailer can't send.
