@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get '/about',             to: 'pages#about'
     get '/retreat',           to: 'pages#retreat'
     get '/services',          to: 'pages#services'
-    get '/products',          to: 'pages#products'
+    #get '/products',          to: 'pages#products'
     get '/terms_of_service',  to: 'pages#terms_of_service'
     get '/privacy_policy',    to: 'pages#privacy_policy'
 
