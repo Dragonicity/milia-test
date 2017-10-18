@@ -29,6 +29,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'letter_opener', group: :development
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
