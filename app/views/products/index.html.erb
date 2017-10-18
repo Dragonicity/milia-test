@@ -7,13 +7,13 @@
 <table class="table table-bordered table-striped" id="products">
   <thead>
     <tr>
-      <%= t(:title) %>
-      <%= t(:price) %>   
+      <th><%= t(:title) %></th>
+      <th><%= t(:price) %></th>
       <th class="fit"><%= t(:actions) %></th>
     </tr>
   </thead>
   <tbody>
-    <% @products.each do |product|  %>
+    <% @products.each do |product| %>
       <tr>
         <td <%= product.title %>></td>
         <td <%= product.price %>></td>

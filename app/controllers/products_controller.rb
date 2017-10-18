@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @products = Product.all.page(params[:page]).per(10)
+    @products = Product.all
   end
 
   def show
