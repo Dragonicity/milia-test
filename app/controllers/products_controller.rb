@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   before_action :set_product, only: [:show, :edit, :update, :destroy ]
   
-  access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
+  #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
     @products = Product.all
