@@ -22,6 +22,10 @@ module ApplicationHelper
         title: t(:products)
       },
       {
+        url: store_index_path,
+        title: t(:store),
+      },
+      {
         url: blogs_path,
         title: t(:blog)
       }

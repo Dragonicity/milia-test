@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'store/index'
+
   get 'purchases/show'
 
   scope "(:locale)" do
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
     get '/retreat',           to: 'pages#retreat'
     get '/services',          to: 'pages#services'
     #get '/products',          to: 'pages#products'
+    get '/store_index',       to: 'store#index'
     get '/terms_of_service',  to: 'pages#terms_of_service'
     get '/privacy_policy',    to: 'pages#privacy_policy'
 
