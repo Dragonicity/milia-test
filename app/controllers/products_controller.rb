@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "#{t(:product)} #{t(:created)}"
       redirect_to products_path
     else
-      flash.now[:alert] = "#{t(:product)} #{t(:not_created)}"
+      #flash.now[:alert] = "#{t(:product)} #{t(:not_created)}"
       render :new
     end
   end
