@@ -25,7 +25,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   def create
     product = Product.friendly.find(params[:product_id]) 
-    @line_item = @cart.line_items.build(product: product)
+    @line_item = @cart.add_product(product)
 
     if @line_item.save
       redirect_to @line_item.cart, notice: 'Line item was successfully created.'
@@ -57,6 +57,6 @@ class LineItemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id)
+      params.require(:line_item).permit(:product_id, :cart_id, :quantity)
     end
 end
