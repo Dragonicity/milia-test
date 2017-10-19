@@ -1,0 +1,104 @@
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+
+.products {
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .thumb_nail {
+    width:  60px;
+    height: 70px;
+  }
+
+  .list_description {
+    width: 60%;
+
+    dl {
+      margin: 0;
+    }
+
+    dt {
+      color:        #244;
+      font-weight:  bold;
+      font-size:    larger;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  .list_actions {
+    font-size:    x-small;
+    text-align:   right;
+    padding-left: 1em;
+  }
+
+  .list_line_even {
+    background:   #e0f8f8;
+  }
+
+  .list_line_odd {
+    background:   #f8b0f8;
+  }
+}

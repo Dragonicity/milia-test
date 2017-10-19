@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
 
    def update
     if @product.update(product_params)
-      flash[:notice] = "#{t(:product)} #{t(:updated)}"
+      #flash[:notice] = "#{t(:product)} #{t(:updated)}"
       redirect_to products_path
     else
       flash.now[:alert] = "#{t(:product)} #{t(:not_updated)}"

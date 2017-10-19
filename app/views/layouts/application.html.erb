@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body data-turbolinks="false">
+  <body data-turbolinks="false" class='<%= controller.controller_name %>'>
     <div class="container">
       <div class="row">
         <%= render 'layouts/navbar' %>

@@ -1,32 +1,33 @@
-<div class="page-header">
-  <%= render 'shared/page_title', title: t(:product_index_title) %>
-  <ul class="actions">
-    <li><%= link_to t(:new), new_product_path, class: "new" %></li>
-  </ul>
-</div>
-<table class="table table-bordered table-striped" id="products">
-  <thead>
-    <tr>
-      <th><%= t(:title) %></th>
-      <th><%= t(:price) %></th>
-      <th class="fit"><%= t(:actions) %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.title %></td>
-        <td><%= product.price %></td>
-        <td class="fit">
-          <%= link_to t(:show), product_path(product),
-            class: "btn btn-xs btn-info"%>
-          <%= link_to t(:edit), edit_product_path(product), 
-            class: "btn btn-xs btn-primary"%>
-          <%= link_to t(:delete), product_path(product), 
-            class: "btn btn-xs btn-danger", method: :delete, 
-            data: { confirm: t('.are_you_sure') } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
+<p id="notice"><%= notice %></p> 
+
+<h1>Products</h1>
+
+<table>
+<% @products.each do |product| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+    <td>
+      <%= image_tag(product.thumb_nail, class: 'thumb_nail') %>
+    </td>
+
+    <td class="list_description">
+      <dl>
+        <dt><%= product.title %></dt>
+        <dd><%= truncate(strip_tags(product.description),
+               length: 80) %></dd>
+      </dl>
+    </td>
+
+    <td class="list_actions">
+      <%= link_to 'Show', product %><br/>
+      <%= link_to 'Edit', edit_product_path(product) %><br/>
+      <%= link_to 'Destroy', product, method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
 </table>
+
+<br />
+
+<%= link_to 'New product', new_product_path %>
