@@ -28,7 +28,7 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product)
 
     if @line_item.save
-      redirect_to @line_item.cart
+      redirect_to store_index_url
     else
       render :new
     end
@@ -46,7 +46,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   def destroy
     @line_item.destroy
-    redirect_to cart_url(session[:cart_id])
+    redirect_to store_index_path
   end
 
   private

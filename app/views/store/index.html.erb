@@ -1,33 +1,30 @@
-<p id="notice"><%= notice %></p>
-<div id="banner">
-  <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %> <span class="title"><%= @page_title %></span>
-</div>
-
-<div id="columns">
-  <div id="side">
-    <ul>
-      <li><a href="http://www....">Some text</a></li>
-      <li><a href="http://www....">Some text</a></li>
-      <li><a href="http://www....">Some text</a></li>
-    </ul>
-  </div>
-  <div id="main">
-    <% cache @products do %>
-      <% @products.each do |product| %>
-        <% cache product do %>
-          <div class="entry">
-            <%= image_tag(product.thumb_nail) %>
-            <h3><%= product.title %></h3>
-            <div class="description">
-              <%= sanitize(product.description) %> 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <% cache @products do %>
+        <% @products.each do |product| %>
+          <% cache product do %>
+            <div class="entry">
+              <%= image_tag(product.thumb_nail) %>
+              <h3><%= product.title %></h3>
+              <div class="description">
+                <%= sanitize(product.description) %> 
+              </div>
+              <div class="price_line">
+                <span class="price"><%= number_to_currency(product.price) %></span>
+                <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+              </div>
             </div>
-            <div class="price_line">
-              <span class="price"><%= number_to_currency(product.price) %></span>
-              <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
-            </div>
-          </div>
+          <% end %>
         <% end %>
       <% end %>
-    <% end %>
+    </div>  
+    <div class="col-sm-6">
+      <div id="side">
+        <div class="cart">
+          <%= render @cart %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,11 +1,13 @@
 class ChargesController < ApplicationController
-  
+  include CurrentCart
+  before_action :set_cart
+
   def new
   end
 
   def create
 
-    amount = Cart.find(session[:cart_id]).total_price.to_i * 100
+    amount = @cart.total_price.to_i * 100
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],

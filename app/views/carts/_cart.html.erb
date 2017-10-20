@@ -1,0 +1,58 @@
+<h2>Your Cart</h2>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Unit Price</th>
+      <th>Item Total</th>
+      <th class="fit"><%= t(:actions) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render cart.line_items %>
+    <tr class="total_line">
+      <td colspan="2">Total</td>
+      <td></td>
+      <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= form_tag charges_path, id: 'chargeForm' do %>
+  <% if flash[:error].present? %>
+    <div id="error_explanation">
+      <p><%= flash[:error] %></p>
+    </div>
+  <% end %>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <%= hidden_field_tag 'stripeToken' %>
+  <%= hidden_field_tag 'amount', cart.total_price %>
+  <%= hidden_field_tag 'stripeEmail' %>
+  <%= hidden_field_tag 'product_id', 1 %>
+  <div class="actions">
+    <%= link_to t(:checkout), cart_path(@cart), class: "checkout mr-1", id: "btn-buy" %>
+    <%= link_to t(:empty_cart), cart_path(@cart), class: "empty_cart", 
+        method: :delete, data: { confirm: t(:are_you_sure) } %>
+  </div>
+
+  <script>
+    var handler = StripeCheckout.configure({
+      key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+      token: function(token, arg) {
+        document.getElementById("stripeToken").value = token.id;
+        document.getElementById("stripeEmail").value = token.email;
+        document.getElementById("chargeForm").submit();
+      }
+    });
+    document.getElementById('btn-buy').addEventListener('click', function(e) {
+      handler.open({
+        name: "Retreat Store",
+        description: "Cart: #{cart.id}",
+        amount: document.getElementById("amount").value
+      });
+      e.preventDefault();
+    })
+  </script>
+<% end %>
