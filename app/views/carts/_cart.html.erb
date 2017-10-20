@@ -1,19 +1,19 @@
 <% unless cart.line_items.empty? %>
-<h2>Your Cart</h2>
+<h2><%= t(:cart) %></h2>
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Unit Price</th>
-      <th>Item Total</th>
+      <th><%= t(:product)  %></th>
+      <th><%= t(:quantity) %></th>
+      <th><%= t(:price)    %> </th>
+      <th><%= t(:total)    %></th>
       <th class="fit"><%= t(:actions) %></th>
     </tr>
   </thead>
   <tbody>
     <%= render cart.line_items %>
     <tr class="total_line">
-      <td colspan="2">Total</td>
+      <td colspan="2"><%= t(:total) %></td>
       <td></td>
       <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
       <td></td>
