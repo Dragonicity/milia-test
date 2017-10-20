@@ -6,7 +6,7 @@ class LineItemsController < ApplicationController
 
   # GET /line_items
   def index
-    @line_items = LineItem.all
+    @line_items = LineItem.all.title_order
   end
 
   # GET /line_items/1
@@ -27,10 +27,13 @@ class LineItemsController < ApplicationController
     product = Product.friendly.find(params[:product_id]) 
     @line_item = @cart.add_product(product)
 
-    if @line_item.save
-      redirect_to store_index_url
-    else
-      render :new
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to store_index_url }
+        format.js
+      else
+        render :new
+      end
     end
   end
 
