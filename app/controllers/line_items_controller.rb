@@ -28,7 +28,7 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product)
 
     if @line_item.save
-      redirect_to @line_item.cart, notice: 'Line item was successfully created.'
+      redirect_to @line_item.cart
     else
       render :new
     end
@@ -46,7 +46,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   def destroy
     @line_item.destroy
-    redirect_to line_items_url, notice: 'Line item was successfully destroyed.'
+    redirect_to cart_url(session[:cart_id])
   end
 
   private
