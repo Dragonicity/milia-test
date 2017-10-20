@@ -1,5 +1,6 @@
+<% unless cart.line_items.empty? %>
 <h2>Your Cart</h2>
-<table class="table table-bordered table-striped">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Product</th>
@@ -11,7 +12,7 @@
   </thead>
   <tbody>
     <%= render cart.line_items %>
-    <tr class="total_line">:
+    <tr class="total_line">
       <td colspan="2">Total</td>
       <td></td>
       <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
@@ -55,4 +56,5 @@
       e.preventDefault();
     })
   </script>
+<% end %>
 <% end %>
