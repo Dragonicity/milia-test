@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get '/store_index',       to: 'store#index'
     get '/terms_of_service',  to: 'pages#terms_of_service'
     get '/privacy_policy',    to: 'pages#privacy_policy'
+    get 'tags/:tag',          to: 'blogs#index', as: :tag
 
     resources :blogs do 
       member do 

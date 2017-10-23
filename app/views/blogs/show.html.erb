@@ -22,6 +22,7 @@
   <p><%= @blog.user.full_name %></p>
   <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= @blog.comments.count if @blog.comments.count > 0 %></i> </p>
   <p><%= sanitize @blog.body %></p> 
+  <p><%= t(:tags) %>&nbsp;<%= raw(@blog.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')) %></p>
   <%= render 'comments/comment_form' %>
    <div id="comments" data-blog-id="<%= @blog.id %>" >
     <%= render @blog.comments %>

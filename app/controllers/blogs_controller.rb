@@ -5,10 +5,15 @@ class BlogsController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    if logged_in?(:site_admin)
+    case 
+    when logged_in?(:site_admin) && params[:tag] == nil
       @blogs = Blog.reverse_date_order.page(params[:page]).per(3)
-    else
-        @blogs = Blog.published.reverse_date_order.page(params[:page]).per(3)
+    when logged_in?(:site_admin) && params[:tag]
+      @blogs = Blog.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
+    when !logged_in?(:site_admin) && params[:tag] == nil
+      @blogs = Blog.published.reverse_date_order.page(params[:page]).per(3)
+    when !logged_in?(:site_admin) && params[:tag]
+       @blogs = Blog.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
     end
   end
 
@@ -66,7 +71,7 @@ class BlogsController < ApplicationController
     
     def blog_params
       params.require(:blog).permit(:title, :body, :thumb_nail, 
-        :main_image, :status, :topic_id, :user_id)
+        :main_image, :status, :topic_id, :user_id, :tag_list)
     end
 
     def set_blog

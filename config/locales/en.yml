@@ -51,6 +51,7 @@ en:
   store:                  "Store"
   subject:                "Subject"
   subscribe:              "Subscribe"
+  tags:                   "Tags (separated by commas)"
   terms_of_service:       "Terms of Service"
   title:                  "Title"
   thumb_nail:             "Thumb Nail"
