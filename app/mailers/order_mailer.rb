@@ -8,8 +8,8 @@ class OrderMailer < ApplicationMailer
     mail to: "to@example.org"
   end
 
-  def shipped
-    @greeting = "Hi"
+  def shipped(order)
+    @order = order
 
     mail to: "to@example.org"
   end

@@ -7,9 +7,6 @@
   <td><%= line_item.quantity %></td>
   <td><%= line_item.price %></td>
   <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
-  <td class="fit">
-    <%= link_to t(:delete), line_item_path(line_item), 
-      class: "btn btn-xs btn-danger", method: :delete, 
-      data: { confirm: t('.are_you_sure') } %>
+ 
   </td>
 </tr>
