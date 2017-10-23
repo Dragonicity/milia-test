@@ -27,7 +27,9 @@ Rails.application.routes.draw do
 
     resources :charges
     resources :contacts, only: [:new, :create]
-    resources :products
+    resources :products do
+      get :who_bought, on: :member
+    end
     resources :purchases, only: [:show]
     resources :subscriptions
     resources :topics, only: [:index, :show]
