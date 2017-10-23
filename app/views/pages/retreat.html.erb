@@ -1,28 +1,8 @@
+<% @retreats.each do |retreat| %>
+  <%= retreat["id"] %>
+  <%= retreat["name"] %>
+  <%= retreat["registrations_url"] %>
+  <%= retreat["categories"] %> <br />
+<% end %>
 
-
-
-
-# access the API and parse the JSON response
-with request.urlopen(url) as response:
-    data = json.loads(response.read().decode('utf8'))
-
-# print the names and dates of the programs
-for program in data:
-    print('{name} (from {start_date} to {end_date})'.format(
-        name=program['name'],
-        start_date=program['start_date'],
-        end_date=program['end_date'],
-    ))
-
-    
-
-
-// access the API and parse the JSON response
-$response = file_get_contents($url);
-$programs = json_decode($response);
-// print the names and dates of the programs
-foreach ($programs as $program) {
-    echo "$program->name (from $program->start_date to $program->end_date)\n";
-}
-
-
+<br />
