@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  include SetCurrentCart
+  before_action :set_cart, only: [:update]
 
   before_action :set_product, only: [:show, :edit, :update, :destroy ]
   
@@ -31,12 +33,19 @@ class ProductsController < ApplicationController
   end
 
    def update
-    if @product.update(product_params)
-      #flash[:notice] = "#{t(:product)} #{t(:updated)}"
-      redirect_to products_path
-    else
-      flash.now[:alert] = "#{t(:product)} #{t(:not_updated)}"
-      render :edit
+    respond_to do |format|
+      if @product.update(product_params)
+        format.html { redirect_to @product,
+          notice: "#{t(:product)} #{t(:updated)}" }
+        format.json { render :show, status: :ok, location: @product }
+        
+        @products = Product.all 
+        ActionCable.server.broadcast 'products',
+          html: render_to_string('store/index', layout: false)
+      else
+        flash.now[:alert] = "#{t(:product)} #{t(:not_updated)}"
+        render :edit
+      end
     end
   end
 
