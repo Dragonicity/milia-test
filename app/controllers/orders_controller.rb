@@ -26,9 +26,12 @@ class OrdersController < ApplicationController
   # POST /orders
   def create
     @order = Order.new(order_params)
+    @order.add_line_items_from_cart(@cart)
 
     if @order.save
-      redirect_to @order, notice: 'Order was successfully created.'
+      Cart.destroy(session[:cart_id])
+      session[:cart_id] = nil
+      redirect_to store_index_url, notice: 'Order was successfully created.'
     else
       render :new
     end
