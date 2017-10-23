@@ -21,6 +21,13 @@
   </tbody>
 </table>
 
+<%= link_to t(:checkout), new_order_path, class: "checkout mr-1" %>
+<%= link_to t(:empty_cart), cart_path(@cart), class: "empty_cart", 
+        method: :delete, data: { confirm: t(:are_you_sure) } %>
+
+
+<!--
+
 <%= form_tag charges_path, id: 'chargeForm' do %>
   <% if flash[:error].present? %>
     <div id="error_explanation">
@@ -58,3 +65,6 @@
   </script>
 <% end %>
 <% end %>
+
+
+-->
