@@ -1,6 +1,6 @@
 <%= form_for @comment, url: "#" do |f| %>
   <div class="form-group">
-    <%= f.label :content %>
+    <%= f.label :content, t(:comments) %>
     <%= f.text_area :content, class: "form-control" %>
   </div>
   <%= f.submit t(:save), class: "btn btn-primary" %>
