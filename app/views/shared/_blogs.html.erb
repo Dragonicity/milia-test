@@ -1,10 +1,10 @@
 <div class="page-header">
   <%= render 'shared/page_title', title: t(:blog_index_title) %>
-  <ul class="actions">
+  <ul class="actions form-inline">
     <li><%= link_to t(:new), new_blog_path, class: "new" if logged_in?(:site_admin) %></li>
     <%= search_form_for @q do |f| %>
-      <%= f.label :body_cont %>
-      <%= f.search_field :body_cont %>
+      <%= f.search_field :body_cont, class: "form-control mb-2", placeholder: t(:search) %>
+       <button class="btn btn-outline-success mb-2" type="submit"><%= t(:search) %></button>
     <% end %>
   </ul>
 </div>
