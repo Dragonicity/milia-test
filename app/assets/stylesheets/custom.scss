@@ -122,6 +122,10 @@ a.nav-link:focus {
   margin-right: 20px;
 }
 
+.navbar-toggler-icon {
+  color: $accent-color;
+}
+
 #logo:hover,
 #logo:focus {
   color: $accent-color;
