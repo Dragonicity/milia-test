@@ -21,6 +21,22 @@
           <% else %>
             <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 30)).html_safe, edit_user_registration_path, class: "nav-link float-right" %>
           <% end %>
+
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img <%= gravatar_helper current_user %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        </li>
+
+
         <% end %>
       </div>
     </div>

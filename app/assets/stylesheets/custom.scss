@@ -126,6 +126,12 @@ a.nav-link:focus {
   color: $accent-color;
 }
 
+.navbar .nav > li > .dropdown-menu::after, 
+.navbar .nav > li > .dropdown-menu::before {
+  display:none;
+}
+
+
 #logo:hover,
 #logo:focus {
   color: $accent-color;
