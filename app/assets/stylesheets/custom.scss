@@ -130,7 +130,6 @@ ul.actions {
   margin-bottom: 0px;
   bottom: -2px;
   right: 0px;
-  
   text-align: left;
 }
 
@@ -138,6 +137,7 @@ ul.actions {
 
 .page-header {
   position: relative;
+  width: 100%;
   padding-bottom: 20px;
   &:first-child {
     margin-top: 20px;
@@ -155,8 +155,6 @@ ul.actions {
     margin: 0;
     text-align: right;
     float: right;
-    width: 500px;
-    color: $red;
     li {
       list-style: none;
       text-align: right;
