@@ -2,21 +2,16 @@
   <%= render 'shared/page_title', title: t(:blog_index_title) %>
   <ul class="actions">
     <li><%= link_to t(:new), new_blog_path, class: "new" if logged_in?(:site_admin) %></li>
-    <li><form class="form-inline my-2 my-lg-0">
-          <% if params[:locale] == 'en' %>
-             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <% else %>
-            <input class="form-control mr-sm-2" type="text" placeholder=<%= t(:search) %> aria-label="Search">
-          <% end %>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= t(:search) %></button>
-        </form>
-      </li>
+    <%= search_form_for @q do |f| %>
+      <%= f.label :body_cont %>
+      <%= f.search_field :body_cont %>
+    <% end %>
   </ul>
 </div>
 <div class="container-fluid">
   <br />
   <div class="row row-offcanvas row-offcanvas-right">
-    <div class="col-8 col-md-8">
+    <div class="col-9 col-md-9">
       <p class="float-right d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
       </p>
@@ -25,9 +20,7 @@
         <%= paginate @blogs %>
     </div>
     <div class="col-3 col-md-3 sidebar-offcanvas" id="sidebar">
-      <div class="col-sm-2 offset-sm-1">
         <%= render 'shared/blogs_sidebar' %>
-      </div>
     </div>
   </div>
 </div>

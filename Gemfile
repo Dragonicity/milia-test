@@ -32,6 +32,7 @@ gem 'dotenv-rails', '~> 2.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'letter_opener', group: :development
 gem 'acts-as-taggable-on', '~> 5.0'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

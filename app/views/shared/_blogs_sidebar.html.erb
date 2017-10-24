@@ -1,4 +1,4 @@
-<div class="col-sm-3 offset-sm-1 blog-sidebar">
+<div class="blog-sidebar">
   <div class="sidebar-module">
     <h4><%= t(:topics) %></h4>
     <% @sidebar_topics.title_order.each do |topic| %>
@@ -6,8 +6,8 @@
     <% end %><br />
     <h4><%= t(:tags) %></h4>
     <div id='tag_cloud'>
-      <% tag_cloud Blog.tag_counts, %w{s m l} do |tag, css_class| %>
-        <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+      <% tag_cloud Blog.tag_counts.order("name asc"), %w{s m l} do |tag, css_class| %>
+        <%= link_to tag.name, tag_path(tag.name), class: css_class %>&nbsp;
       <% end %>
     </div>
   </div>

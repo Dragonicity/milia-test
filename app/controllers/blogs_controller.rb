@@ -5,15 +5,16 @@ class BlogsController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
+    @q = Blog.ransack(params[:q])
     case 
     when logged_in?(:site_admin) && params[:tag] == nil
-      @blogs = Blog.reverse_date_order.page(params[:page]).per(3)
+      @blogs = @q.result.reverse_date_order.page(params[:page]).per(3)
     when logged_in?(:site_admin) && params[:tag]
-      @blogs = Blog.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
+      @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
     when !logged_in?(:site_admin) && params[:tag] == nil
-      @blogs = Blog.published.reverse_date_order.page(params[:page]).per(3)
+      @blogs = @q.result.published.reverse_date_order.page(params[:page]).per(3)
     when !logged_in?(:site_admin) && params[:tag]
-       @blogs = Blog.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
+       @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
     end
   end
 
