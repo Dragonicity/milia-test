@@ -18,10 +18,6 @@ module ApplicationHelper
         title: t(:services)
       },
       {
-        url: products_path,
-        title: t(:products)
-      },
-      {
         url: store_index_path,
         title: t(:store),
       },

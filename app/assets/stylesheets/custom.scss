@@ -91,11 +91,15 @@ a:visited {
 .navbar-custom {
   background-color: $default-primary-color;
   color: $white;
-  width: 100%;
+  
+  a {
+    color: $accent-color;
+    margin-right: 0px;
+  }
 }
 
 .navbar-nav {
-  width: 100%;
+
 }
 
 a.nav-link  {
@@ -113,8 +117,8 @@ a.nav-link:focus {
   color: $accent-color;
 }
 
-#logo {
-  color: $white;
+.a .navbar-brand .logo {
+  color: $accent_color;
   margin-right: 20px;
 }
 
