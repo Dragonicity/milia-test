@@ -3,43 +3,35 @@
     <%= link_to(image_tag("dream-cauldron-logo.png", size: "50x50"),root_path) %>
     <%= link_to(t(:brand), root_path) %>
   </a>
-  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-right navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <ul class="navbar-nav">
+  <ul class="navbar-nav ml-2">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <%= nav_helper %>
-      <div class="col float-right">
+      <div class="col">
         <% if !current_user %>
-          <%= link_to(t('sign_in'),    new_user_session_path, class: "nav-link float-right") %>
+          <%= link_to(t('sign_in'), new_user_session_path, class: "nav-link float-right") %>
           <%= link_to(t('sign_up'), new_user_registration_path, class: "nav-link float-right") %>
-        <% else %>
-          <%= link_to(t('sign_out'),   destroy_user_session_path, method: :delete, class: "nav-link float-right") %>
-         
-          <% if gravatar?(current_user) %>
-            <%= gravatar_helper current_user %>
-          <% else %>
-            <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 30)).html_safe, edit_user_registration_path, class: "nav-link float-right" %>
-          <% end %>
-
-
-
-        <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img <%= gravatar_helper current_user %>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-        </li>
-
-
         <% end %>
-      </div>
+ 
+ 
+
+        <% if current_user %>
+          <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <% if gravatar?(current_user) %>
+            <img <%= gravatar_helper(current_user) %>
+          <% else %>
+            <%= ('<i class="fa fa-user nav-link"></i> ' + truncate(current_user.email, length: 30)).html_safe %>
+          <% end %>
+          </a>
+        <% end %>       
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item nav-link"<%= link_to t('edit_profile'), edit_user_registration_path %></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item nav-link"<%= link_to(t('sign_out'), destroy_user_session_path, method: :delete) %></a>
+        </div>
+      </a>
     </div>
-  </ul>
+ </ul>
 </nav>

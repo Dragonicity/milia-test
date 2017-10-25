@@ -22,16 +22,6 @@ $gray:         lighten(#000, 33.5%) !default; // #555
 $gray-light:   lighten(#000, 60%) !default;   // #999
 $gray-lighter: lighten(#000, 93.5%) !default; // #eee
 
-/* Bootstrap */
-
-$dropdown-link-color: $gray-dark;
-$dropdown-link-hover-bg: $default-primary-color;
-$dropdown-link-hover-color: $accent_color;
-
-$navbar-default-toggle-hover-bg: $accent-color;
-$navbar-default-toggle-icon-bar-bg: $default-primary-color;
-$navbar-default-toggle-border-color: $accent-color;
-
 /* Alerts */
 
 .alert-notice {
@@ -91,15 +81,15 @@ a:visited {
 .navbar-custom {
   background-color: $default-primary-color;
   color: $white;
-  
+  width: 100%;
   a {
     color: $accent-color;
     margin-right: 0px;
   }
 }
 
-.navbar-nav {
-
+ul.navbar-nav {
+  width: auto;
 }
 
 .dropdown-menu { 
@@ -115,7 +105,9 @@ a.dropdown-item {
   }
 }
 
-a.nav-link  {
+a.nav-link,
+a.dropdown-item .nav-link,
+a#navbarDropdown  {
   color: $white;
   margin-right: 15px;
 }
@@ -133,10 +125,6 @@ a.nav-link:focus {
 .a .navbar-brand .logo {
   color: $accent_color;
   margin-right: 20px;
-}
-
-.navbar-toggler-icon {
-  color: $accent-color;
 }
 
 #logo:hover,

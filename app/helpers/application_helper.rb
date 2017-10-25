@@ -1,5 +1,8 @@
 module ApplicationHelper
-   def nav_items
+
+  require 'net/http'
+
+  def nav_items
     [
       {
         url: about_path,
@@ -46,12 +49,6 @@ module ApplicationHelper
       ActiveRecord::Validations::PresenceValidator)
   end
 
-  def gravatar_helper user
-    image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
-  end
-
-  require 'net/http'
-
   def gravatar?(user)
     gravatar_check = "http://gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email.downcase)}.png?d=404"
     uri = URI.parse(gravatar_check)
@@ -59,6 +56,10 @@ module ApplicationHelper
     request = Net::HTTP::Get.new(uri.request_uri)
     response = http.request(request)
     response.code.to_i != 404 # from d=404 parameter
+  end
+
+  def gravatar_helper user
+    image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
   end
 
 end
