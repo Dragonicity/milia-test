@@ -11,8 +11,8 @@
         <li class="list-group-item"><%= t(:end_date) %> <%= retreat.end_date %></li>
       </ul>
       <div class="card-body">
-        <%= link_to(t(:retreat_program_link), retreat.program_link, target: :_blank) %>
-        <%= link_to(t(:retreat_registration_link), retreat.registration_link, target: :_blank) %>
+        <%= link_to(t(:program_link), retreat.program_link, target: :_blank) %>
+        <%= link_to(t(:registration_link), retreat.registration_link, target: :_blank) %>
         <% if logged_in?(:site_admin) %>
             <ul class="actions">
             <li><%= link_to t(:edit), edit_retreat_path(retreat), class: "btn btn-primary" %></li>
