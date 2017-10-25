@@ -3,7 +3,7 @@ class RetreatsController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @retreats = Retreat.all.reverse_date_order
+    @retreats = Retreat.all.reverse_date_order.page(params[:page]).per(3)
   end
 
   def show
@@ -74,7 +74,7 @@ class RetreatsController < ApplicationController
         end
       end
       
-      flash[:notice = imported_retreats + " were imported"]
+      flash[:notice] = imported_retreats + " were imported"
       redirect_to retreats_path
     
     else

@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     resources :purchases, only: [:show]
 
     resources :retreats do
-      post :import
+      post '/import', action: :import, on: :collection
     end
 
     resources :subscriptions
