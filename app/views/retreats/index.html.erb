@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= render 'shared/page_title', title: t(:retreat_index_title) %>
+  <ul class="actions form-inline">
+    <li><%= link_to t(:new), new_blog_path, class: "new" if logged_in?(:site_admin) %></li>
+    <%= search_form_for @q do |f| %>
+      <%= f.search_field :body_cont, class: "form-control mb-2", placeholder: t(:search) %>
+       <button class="btn btn-outline-success mb-2" type="submit"><%= t(:search) %></button>
+    <% end %>
+  </ul>
+</div>
+<div class="container-fluid">
+  <br />
+  <div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-9 col-md-9">
+      <p class="float-right d-md-none">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+        <%= paginate @blogs %> <br />
+        <%= render @blogs %>
+        <%= paginate @blogs %>
+    </div>
+    <div class="col-3 col-md-3 sidebar-offcanvas" id="sidebar">
+        <%= render 'shared/blogs_sidebar' %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <%= link_to t(:back_to_top), blogs_path %>
+</div>

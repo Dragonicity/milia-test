@@ -43,6 +43,7 @@ en:
   publish:                "Publish"
   pubished:               "Published"
   quantity:               "Quantity"
+  retreat:                "Retreat"
   retreats:               "Retreats"
   save:                   "Save"
   search:                 "Search"
@@ -95,6 +96,10 @@ en:
   product_index_title:    "Products"
   product_new_title:      "New Product"
   product_show_title:     "Product"
+  retreat_edit_title:     "Edit retreat"
+  retreat_index_title:    "Retreats"
+  retreat_new_title:      "New retreat"
+  retreat_show_title:     "Retreat"
 
   # Kaminari Pagination
 

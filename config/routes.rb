@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     get 'pages/home'
     get '/about',             to: 'pages#about'
-    get '/retreat',           to: 'pages#retreat'
+    #get '/retreat',           to: 'pages#retreat'
     get '/services',          to: 'pages#services'
     #get '/products',          to: 'pages#products'
     get '/store_index',       to: 'store#index'

@@ -11,7 +11,7 @@ module ApplicationHelper
         title: t(:contact)
       }, 
       {
-        url: retreat_path,
+        url: retreats_path,
         title: t(:retreats)
       },
       {

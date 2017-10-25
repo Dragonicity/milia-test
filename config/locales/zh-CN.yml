@@ -43,6 +43,7 @@ zh-CN:
   publish:                "发布"
   published:              "发布时间"
   quantity:               "数量"
+  retreat:                "撤退"
   retreats:               "撤退"
   save:                   "保存"
   search:                 "搜索"
@@ -95,6 +96,10 @@ zh-CN:
   product_index_title:    "制品"
   product_new_title:      "新产品"
   product_show_title:     "产品"
+  retreat_edit_title:     "编辑撤退"
+  retreat_index_title:    "撤退"
+  retreat_new_title:      "新撤退"
+  retreat_show_title:     "撤退"
   
   # Standard contents
 

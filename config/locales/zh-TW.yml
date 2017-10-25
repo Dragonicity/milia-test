@@ -41,6 +41,7 @@ zh-TW:
   publish:                "發布"
   published:              "發布時間"
   quantity:               "數量"
+  retreat:                "撤退"
   retreats:               "撤退"
   save:                   "保存"
   search:                 "搜索"
@@ -93,6 +94,10 @@ zh-TW:
   product_index_title:    "製品"
   product_new_title:      "新產品"
   product_show_title:     "產品"
+  retreat_edit_title:     "編輯撤退"
+  retreat_index_title:    "撤退"
+  retreat_new_title:      "新撤退"
+  retreat_show_title:     "撤退"
   
   # Standard contents
 

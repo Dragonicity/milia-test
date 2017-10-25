@@ -43,6 +43,7 @@ fr:
   publish:                "Publier"
   published:              "Publié"
   quantity:               "Quantité"
+  retreat:                "Retraite"
   retreats:               "Retraites"
   save:                   "Enregistrer"
   search:                 "Chercher"
@@ -95,6 +96,10 @@ fr:
   product_index_title:    "Produits"
   product_new_title:      "Nouveau produit"
   product_show_title:     "Produit"
+  retreat_edit_title:     "Modifier la retraite"
+  retreat_index_title:    "Retraites"
+  retreat_new_title:      "Nouvelle retraite"
+  retreat_show_title:     "Retraite"
   
   # Standard contents
 
