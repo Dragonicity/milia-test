@@ -1,7 +1,5 @@
 module ApplicationHelper
 
-  require 'net/http'
-
   def nav_items
     [
       {
