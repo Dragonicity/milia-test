@@ -88,8 +88,8 @@ a:visited {
   }
 }
 
-ul.navbar-nav {
-  width: auto;
+.navbar-nav {
+  width: calc(100% - 200px);
 }
 
 .dropdown-menu { 

@@ -34,7 +34,7 @@ module ApplicationHelper
   def nav_helper
     nav_links = ''
     nav_items.each do |item|
-      nav_links << "<#{'li'}><a href='#{item[:url]}' class='#{'nav-link'} #{active? item[:url]}'>#{item[:title]}</a></#{'li'}>"
+      nav_links << "<#{'li class="nav-item"'}><a href='#{item[:url]}' class='#{'nav-link'} #{active? item[:url]}'>#{item[:title]}</a></#{'li'}>"
     end
     nav_links.html_safe
   end
