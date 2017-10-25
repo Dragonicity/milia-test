@@ -58,7 +58,7 @@ class RetreatsController < ApplicationController
           retreat.name              = rbg_retreat["name"]
           retreat.start_date        = rbg_retreat["start_date"]
           retreat.end_date          = rbg_retreat["end_date"]
-          retreat.teachers          = rbg_retreat["teachers"].flatten
+          retreat.teachers          = rbg_retreat["teachers"].join(", ")
           retreat.program_link      = rbg_retreat["program_link"]
           retreat.registration_link = rbg_retreat["registration_link"]
           retreat.thumb_nail        = rbg_retreat["images"]["thumbnail"]["url"]
