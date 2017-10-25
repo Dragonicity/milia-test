@@ -32,6 +32,11 @@ Rails.application.routes.draw do
       get :who_bought, on: :member
     end
     resources :purchases, only: [:show]
+
+    resources :retreats do
+      post :import
+    end
+
     resources :subscriptions
     resources :topics, only: [:index, :show]
 
