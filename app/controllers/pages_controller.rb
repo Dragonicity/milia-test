@@ -26,8 +26,7 @@ class PagesController < ApplicationController
 
       # Get and parse the JSON returned
       resp = Net::HTTP.get_response(URI.parse(url))
-      @retreats = JSON.parse(resp.body)
-
+      @retreats = JSON.parse(resp.body).select { |retreat| retreat["categories"] == ["application"] }
     else
       # One or both environment variables not retrieved
       flash.now[:alert] = "Domain: #{domain} or token: #{token} not set"

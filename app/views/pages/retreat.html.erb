@@ -1,8 +1,18 @@
+
 <% @retreats.each do |retreat| %>
   <%= retreat["id"] %>
   <%= retreat["name"] %>
-  <%= retreat["registrations_url"] %>
-  <%= retreat["categories"] %> <br />
+  <%= link_to("Registrations Link", retreat["registration_link"]) %>
+  <%= link_to("Program Link", retreat["program_link"]) %> <br />
+  <%= retreat["categories"] %>
+  <%= image_tag(retreat["images"]["thumbnail"]["url"]) %> <br />
+  <%= image_tag(retreat["images"]["medium"]["url"]) %> <br />
+  <%= image_tag(retreat["images"]["large"]["url"]) %> <br />
+
+
 <% end %>
 
 <br />
+
+
+<%= @retreats.inspect %>

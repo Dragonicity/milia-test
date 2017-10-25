@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2017-10-25
+  end_date: 2017-10-25
+  teachers: MyString
+  program_link: MyString
+  registration_link: MyString
+  thumb_nail: MyString
+  main_image: MyString
+  rbg_id: 1
+
+two:
+  name: MyString
+  start_date: 2017-10-25
+  end_date: 2017-10-25
+  teachers: MyString
+  program_link: MyString
+  registration_link: MyString
+  thumb_nail: MyString
+  main_image: MyString
+  rbg_id: 1
