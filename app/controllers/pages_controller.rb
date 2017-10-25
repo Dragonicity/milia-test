@@ -9,9 +9,6 @@ class PagesController < ApplicationController
   def contact
   end
 
-
-  # Controller action for the view to be used to show retreat info
-
   def retreat
   end
 

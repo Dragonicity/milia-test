@@ -7,7 +7,6 @@ class RetreatsController < ApplicationController
   end
 
   def show
-    @seo_keywords = @retreat.name
   end
 
   def new
@@ -49,32 +48,34 @@ class RetreatsController < ApplicationController
     if domain && token
       url = "#{domain}#{token}"
       resp = Net::HTTP.get_response(URI.parse(url))
-      @retreats = JSON.parse(resp.body).select { |retreat| retreat["categories"] == ["application"] }
+      retreats = JSON.parse(resp.body).select { |retreat| retreat["categories"] == ["application"] }
 
       imported_retreats = 0
 
-      @retreats.each do |rgb_retreat|
-        retreat = Retreat.new
-        retreat.name              = rgb_retreat.name
-        retreat.start_date        = rgb_retreat.start_date
-        retreat.end_date          = rgb_retreat.end_date
-        retreat.teachers          = rgb_retreat.teachers.to_s
-        retreat.program_link      = rgb_retreat.program_link
-        retreat.registration_linl = rgb_retreat.registration_link
-        retreat.thumb_nail        = rgb_retreat.thumb_nail
-        retreat.main_image        = rgb_retreat.main_image
-        retreat.rgb_id            = rgb_retreat.rgb_id
+      retreats.each do |rbg_retreat|
+        if Retreat.find_by(rbg_retreat["rbg_id"]) == nil
+          retreat = Retreat.new
+          retreat.name              = rbg_retreat["name"]
+          retreat.start_date        = rbg_retreat["start_date"]
+          retreat.end_date          = rbg_retreat["end_date"]
+          retreat.teachers          = rbg_retreat["teachers"].flatten
+          retreat.program_link      = rbg_retreat["program_link"]
+          retreat.registration_link = rbg_retreat["registration_link"]
+          retreat.thumb_nail        = rbg_retreat["images"]["thumbnail"]["url"]
+          retreat.main_image        = rbg_retreat["images"]["medium"]["url"]
+          retreat.rbg_id            = rbg_retreat["rbg_id"]
 
-        if @retreat.save
-          flash[:notice] = "#{t(:retreat)} #{t(:created)}"
-          imported_retreats += 1
-        else
-          flash[:notice] = "Error in saving retreat: " + rgb_retreat.rgb_id
-          render :index
+          if retreat.save
+            flash[:notice] = "#{t(:retreat)} #{t(:created)}"
+            imported_retreats += 1
+          else
+            flash[:notice] = "Error in saving retreat: " + rbg_retreat.rbg_id.to_s
+            render :index
+          end
         end
       end
       
-      flash[:notice] = imported_retreats + " were imported"
+      flash[:notice] = imported_retreats.to_s + " retreats were imported"
       redirect_to retreats_path
     
     else
