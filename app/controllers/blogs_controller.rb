@@ -39,7 +39,6 @@ class BlogsController < ApplicationController
       flash[:notice] = "#{t(:blog)} #{t(:created)}"
       redirect_to blogs_path
     else
-      flash.now[:alert] = "#{t(:blog)} #{t(:not_created)}"
       render :new
     end
   end
@@ -52,7 +51,6 @@ class BlogsController < ApplicationController
       flash[:notice] = "#{t(:blog)} #{t(:updated)}"
       redirect_to blogs_path
     else
-      flash.now[:alert] = "#{t(:blog)} #{t(:not_updated)}"
       render :edit
     end
   end
