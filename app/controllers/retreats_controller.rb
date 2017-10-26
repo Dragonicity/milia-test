@@ -61,7 +61,7 @@ class RetreatsController < ApplicationController
           retreat.teachers          = rbg_retreat["teachers"].join(", ")
           retreat.program_link      = rbg_retreat["program_link"]
           retreat.registration_link = rbg_retreat["registration_link"]
-          retreat.thumb_nail        = rbg_retreat["images"]["thumbnail"]["url"]
+          retreat.thumb_nail        = rbg_retreat["images"]["medium"]["url"]
           retreat.main_image        = rbg_retreat["images"]["medium"]["url"]
           retreat.rbg_id            = rbg_retreat["rbg_id"]
 

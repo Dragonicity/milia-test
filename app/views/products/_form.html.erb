@@ -25,12 +25,14 @@
           style: "display:none;" %>
     </label>
   </div>
-   <div class="form-group">
+  <%= f.hidden_field :main_image_cache %>
+  <div class="form-group">
     <label class="btn btn-secondary">
       <%= t(:upload_thumb_nail_file) %> <%= f.file_field :thumb_nail,
           style: "display:none;" %>
     </label>
   </div>
+  <%= f.hidden_field :thumb_nail_cache %>
   <div class="form-group">
     <%= f.label t(:description), class: ('required' if required?(@product, :description)) %>
     <%= f.hidden_field :description, class: 'form-control', rows: '15', id: "product_description" %><br/>

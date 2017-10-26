@@ -59,7 +59,7 @@ class ProductsController < ApplicationController
     
     def product_params
       params.require(:product).permit(:title, :description, :thumb_nail, 
-        :main_image, :price)
+        :thumb_nail_cache, :main_image, :main_image_cache, :price)
     end
 
     def set_product
