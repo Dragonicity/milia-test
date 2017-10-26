@@ -6,7 +6,7 @@ class LeadsController < ApplicationController
     if @lead.save
       redirect_to root_path, notice: "Thank you for signing up"
     else
-      redirect_to root_path, alert: "Failed to save"
+      render 'pages/home'
     end
   
   end
