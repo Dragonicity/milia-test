@@ -57,6 +57,7 @@ fr:
   send:                   "Envoyer"
   services:               "Services"
   show:                   "Montrer"
+  sign_up:                "S'inscrire"
   signup_newsletter:      "Inscrivez-vous à notre newsletter"
   signup_newsletter_thanks: "Merci de vous être inscrit à notre newsletter"
   start_date:             "Date de début"

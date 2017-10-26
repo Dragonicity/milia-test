@@ -16,8 +16,8 @@ class Product < ApplicationRecord
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
 
-  mount_uploader :main_image, ProductUploader
-  mount_uploader :thumb_nail, ProductUploader
+  mount_uploader :main_image, ImageUploader
+  mount_uploader :thumb_nail, ImageUploader
 
   private
 

@@ -3,7 +3,7 @@
 </div>
 <div class="container">
   <div class="row justify-content-around">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide mb-2" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -33,18 +33,33 @@
 </div>
 <div class="container">
   <div class="row">
-    <br/>
-    <p>
-      The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
-    </p>
+    <div class="card-deck col-sm-12 mb-2">
+      <div class="card">
+        <div class="card-body center">    
+          <p class="card-text"><%= t(:check_retreats) %></p>
+          <%= link_to t(:retreats), retreats_path, class: "btn btn-primary btn-block" %> 
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body center">
+          <p class="card-text"><%= t(:check_services) %></p>
+          <%= link_to t(:services), services_path, class: "btn btn-primary btn-block" %> 
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body center">
+          <p class="card-text"><%= t(:check_products) %></p>
+          <%= link_to t(:products), store_index_path, class: "btn btn-primary btn-block" %> 
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 <div class="container">
   <div class="row justify-content-around">
     <div class="col-sm-10 card">
       <div class="card-body">
-        <h6 class="card-title"><%= t(:signup_newsletter) %></h6>
+        <h6 class="card-title center"><%= t(:signup_newsletter) %></h6>
         <%= render 'shared/errors', obj: @lead %>
         <%= form_for @lead do |f| %>
           <div class= "form-inline">
@@ -54,7 +69,7 @@
               class: 'form-control mr-2' %>
             <%= f.text_field :email, placeholder: t(:email), 
               class: 'form-control mr-2' %>
-            <%= f.submit t(:save), class: 'btn btn-primary' %>
+            <%= f.submit t(:subscribe), class: 'btn btn-primary' %>
           </div>
         <% end %>
       </div>

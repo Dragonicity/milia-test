@@ -57,6 +57,7 @@ en:
   send:                   "Send"
   services:               "Services"
   show:                   "Show"
+  sign_up:                "Sign up"
   signup_newsletter:      "Sign up for our newsletter"
   signup_newsletter_thanks: "Thank you for signing up for our newsletter"
   start_date:             "Start date"
@@ -88,6 +89,12 @@ en:
   deleted:                "successfully deleted"    
   contact_message_sent:   "Your message has been sent"
   contact_message_error:  "An error occurred with your message"
+
+  # Home page card body text action calls
+
+  check_retreats:         "Check out our transformative and healing group retreats"
+  check_services:         "Check out services we provide before and after retreats"
+  check_products:         "Check out our associated products available for purchase"
 
   # Navbar components
 
