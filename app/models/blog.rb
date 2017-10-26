@@ -6,10 +6,10 @@ class Blog < ApplicationRecord
   belongs_to :user
   belongs_to :topic
   has_many :comments, dependent: :destroy
-  validates_presence_of :title, :body
+  validates_presence_of :title, :topic, :body
 
-  mount_uploader :main_image, BlogUploader
-  mount_uploader :thumb_nail, BlogUploader
+  mount_uploader :main_image, ImageUploader
+  mount_uploader :thumb_nail, ImageUploader
 
   scope :reverse_date_order, -> { order("created_at DESC") }
 end

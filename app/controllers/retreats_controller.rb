@@ -88,8 +88,9 @@ class RetreatsController < ApplicationController
   private
     
     def retreat_params
-      params.require(:retreat).permit(:name, :start_date, :end_date, :teachers, :program_link, :registration_link, :thumb_nail, 
-        :main_image, :rgb_id)
+      params.require(:retreat).permit(:name, :start_date, :end_date, 
+        :teachers, :program_link, :registration_link, :thumb_nail, 
+        :thumb_mail_cache, :main_image, :main_image_cache, :rgb_id)
     end
 
     def set_retreat

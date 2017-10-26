@@ -1,23 +1,29 @@
-<%= form_for @product do |f| %>
-  
-
-
-<% if @product.errors.any? %>
-<div id="error_explanation">
-<h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-<ul>
-<% @product.errors.full_messages.each do |message| %> <li><%= message %></li>
-<% end %>
-</ul> </div>
-<% end %>
-
-
-
-
-  <div class= "col-sm-12">
+<%= render 'shared/errors', obj: @retreat %>
+<%= form_for @retreat do |f| %>
+<div class= "col-sm-12">
   <div class="form-group">
-    <%= f.label t(:title), class: ('required' if required?(@product, :title)) %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label t(:name), class: ('required' if required?(@retreat, :name)) %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(:start_date), class: ('required' if required?(@retreat, :name)) %>
+    <%= f.date_field :start_date, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(:end_date), class: ('required' if required?(@retreat, :name)) %>
+    <%= f.date_field :end_date, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(:teachers), class: ('required' if required?(@retreat, :teachers)) %>
+    <%= f.text_field :teachers, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(:program_link), class: ('required' if required?(@retreat, :program_link)) %>
+    <%= f.text_field :program_link, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(:registration_link), class: ('required' if required?(@retreat, :registration_link)) %>
+    <%= f.text_field :registration_link, class: 'form-control' %>
   </div>
   <div class="form-group">
     <label class="btn btn-secondary">
@@ -34,14 +40,15 @@
   </div>
   <%= f.hidden_field :thumb_nail_cache %>
   <div class="form-group">
-    <%= f.label t(:description), class: ('required' if required?(@product, :description)) %>
-    <%= f.hidden_field :description, class: 'form-control', rows: '15', id: "product_description" %><br/>
-    <trix-editor input="product_description"></trix-editor>
+    <%= f.label t(:body), class: ('required' if required?(@retreat, :body)) %>
+    <%= f.hidden_field :body, class: 'form-control', rows: '15', id: "blog_body" %>
+    <trix-editor input="blog_body"></trix-editor>
   </div>
-   <div class="form-group">
-    <%= f.label t(:price), class: ('required' if required?(@product, :price)) %>
-    <%= f.text_field :price, class: 'form-control' %>
+  <div class="form-group">
+    <%= f.label t(:rbg_id), class: ('required' if required?(@retreat, :rbg_id)) %>
+    <%= f.number_field :rbg_id, class: 'form-control' %>
   </div>
-  <%= f.submit(@product.new_record? ? t(:create): t(:save), class: 'btn btn-primary') %>
+
+  <%= f.submit(@retreat.new_record? ? t(:create): t(:save), class: 'btn btn-primary') %>
   </div>
 <% end %>
