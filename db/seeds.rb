@@ -7,10 +7,15 @@ user.last_name             = "Nelson"
 user.roles                 = "site_admin"
 user.save!
 
+puts "Admin user created"
+
 Topic.create!(title: "Retreats")
 Topic.create!(title: "Retreat Design")
 Topic.create!(title: "Services")
 Topic.create!(title: "Products")
+Topic.create!(title: "General")
+
+puts "5 topics created"
 
 12.times do |blog|
   Blog.create!(

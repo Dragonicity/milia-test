@@ -53,7 +53,7 @@ class RetreatsController < ApplicationController
       imported_retreats = 0
 
       retreats.each do |rbg_retreat|
-        if Retreat.find_by(rbg_retreat["rbg_id"]) == nil
+        unless Retreat.exists?(rbg_id: rbg_retreat["id"].to_s)
           retreat = Retreat.new
           retreat.name              = rbg_retreat["name"]
           retreat.start_date        = rbg_retreat["start_date"]
@@ -63,7 +63,7 @@ class RetreatsController < ApplicationController
           retreat.registration_link = rbg_retreat["registration_link"]
           retreat.thumb_nail        = rbg_retreat["images"]["medium"]["url"]
           retreat.main_image        = rbg_retreat["images"]["large"]["url"]
-          retreat.rbg_id            = rbg_retreat["rbg_id"]
+          retreat.rbg_id            = rbg_retreat["id"]
 
           if retreat.save
             flash[:notice] = "#{t(:retreat)} #{t(:created)}"

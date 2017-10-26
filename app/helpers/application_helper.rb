@@ -3,14 +3,6 @@ module ApplicationHelper
   def nav_items
     [
       {
-        url: about_path,
-        title: t(:about)
-      },
-      {
-        url: new_contact_path,
-        title: t(:contact)
-      }, 
-      {
         url: retreats_path,
         title: t(:retreats)
       },
@@ -25,6 +17,14 @@ module ApplicationHelper
       {
         url: blogs_path,
         title: t(:blog)
+      },
+      {
+        url: about_path,
+        title: t(:about)
+      },
+      {
+        url: new_contact_path,
+        title: t(:contact)
       }
     ]
   end
