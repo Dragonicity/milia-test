@@ -88,6 +88,12 @@ zh-TW:
   contact_message_sent:   "您的郵件已發送"
   contact_message_error:  "您的郵件時出錯"
 
+  # Home page card body text action calls
+
+  check_retreats:         "看看我們的變革和康復團體撤退"
+  check_services:         "退房之前和之後提供我們提供的服務"
+  check_products:         "查看我們的相關產品可供購買"
+
   # Navbar components
 
   edit_profile:           "編輯個人資料"

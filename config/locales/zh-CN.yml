@@ -90,6 +90,12 @@ zh-CN:
   contact_message_sent:   "您的邮件已发送"
   contact_message_error:  "您的邮件时出错"
 
+  # Home page card body text action calls
+
+  check_retreats:         "看看我们的变革和康复团体撤退"
+  check_services:         "退房之前和之后提供我们提供的服务"
+  check_products:         "查看我们的相关产品可供购买"
+
   # Navbar components
 
   edit_profile:           "编辑个人资料"
