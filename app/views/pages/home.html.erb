@@ -2,7 +2,7 @@
   <h1> <%= t :home %> </h1>
 </div>
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-around">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -37,5 +37,22 @@
     <p>
       The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
     </p>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-around">
+    <div class="col-sm-10 card">
+      <div class="card-body">
+        <h6 class="card-title"><%= t(:signup_newsletter) %></h6>
+        <%= form_for @lead do |f| %>
+          <div class= "form-inline">
+            <%= f.text_field :first_name, class: 'form-control mr-2' %>
+            <%= f.text_field :last_name, class: 'form-control mr-2' %>
+            <%= f.text_field :email, class: 'form-control mr-2' %>
+            <%= f.submit t(:save), class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
