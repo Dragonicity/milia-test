@@ -6,15 +6,12 @@
   </ul>
 </div>
 <div class="container-fluid">
-  <br />
   <div class="row">
-    <div class="col-md-12">
-        <%= paginate @retreats %> <br />
-        <%= render @retreats %>
+        <%= paginate @retreats %> <br /><br />
+        <div class="card-deck">
+          <%= render @retreats %>
+        </div>
         <%= paginate @retreats %>
     </div>
   </div>
-</div>
-<div class="container">
-  <%= link_to t(:back_to_top), retreats_path %>
 </div>

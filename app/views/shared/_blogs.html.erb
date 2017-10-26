@@ -8,22 +8,19 @@
     <% end %>
   </ul>
 </div>
-<div class="container-fluid">
-  <br />
-  <div class="row row-offcanvas row-offcanvas-right">
-    <div class="col-9 col-md-9">
-      <p class="float-right d-md-none">
-        <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
-      </p>
-        <%= paginate @blogs %> <br />
+<br />
+<div class="row row-offcanvas row-offcanvas-right">
+  <div class="col-sm-10">
+    <p class="float-right d-md-none">
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+    </p>
+      <%= paginate @blogs %> <br />
+      <div class="card-deck">
         <%= render @blogs %>
-        <%= paginate @blogs %>
-    </div>
-    <div class="col-3 col-md-3 sidebar-offcanvas" id="sidebar">
-        <%= render 'shared/blogs_sidebar' %>
-    </div>
+      </div>
+      <%= paginate @blogs %>
   </div>
-</div>
-<div class="container">
-  <%= link_to t(:back_to_top), blogs_path %>
+  <div class="col-sm-2 sidebar-offcanvas" id="sidebar">
+      <%= render 'shared/blogs_sidebar' %>
+  </div>
 </div>

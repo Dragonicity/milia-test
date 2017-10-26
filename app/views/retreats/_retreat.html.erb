@@ -1,27 +1,22 @@
-<div class="row">
-  <div class="col-4-lg">
-    <div class="card retreat">
-      <p><%= image_tag (retreat.thumb_nail), class: "card-img-top", width: '100%' %></p>
-      <div class="card-body">
-        <h4 class="card-title"><%= link_to retreat.name, retreat_path(retreat) %></h4>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= retreat.teachers %></li>
-        <li class="list-group-item"><%= t(:start_date) %> <%= retreat.start_date %></li>
-        <li class="list-group-item"><%= t(:end_date) %> <%= retreat.end_date %></li>
+<div class="card retreat">
+  <p><%= image_tag (retreat.thumb_nail), class: "card-img-top", width: '100%' %></p>
+  <div class="card-body">
+    <h4 class="card-title"><%= link_to retreat.name, retreat_path(retreat) %></h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= retreat.teachers %></li>
+    <li class="list-group-item"><%= t(:start_date) %> <%= retreat.start_date %>
+    <li class="list-group-item"><%= t(:end_date) %> <%= retreat.end_date %></li>
+  </ul>
+  <div class="card-body">
+    <%= link_to(t(:program_link), retreat.program_link, target: :_blank) %>
+    <%= link_to(t(:registration_link), retreat.registration_link, target: :_blank) %>
+    <% if logged_in?(:site_admin) %>
+        <ul class="actions mt-2">
+        <li><%= link_to t(:edit), edit_retreat_path(retreat), class: "btn btn-primary" %></li>
+        <li><%= link_to t(:delete), retreat_path(retreat), class: "btn btn-danger", 
+            method: :delete, data: { confirm: t(:are_you_sure) } %></li>
       </ul>
-      <div class="card-body">
-        <%= link_to(t(:program_link), retreat.program_link, target: :_blank) %>
-        <%= link_to(t(:registration_link), retreat.registration_link, target: :_blank) %>
-        <% if logged_in?(:site_admin) %>
-            <ul class="actions">
-            <li><%= link_to t(:edit), edit_retreat_path(retreat), class: "btn btn-primary" %></li>
-            <li><%= link_to t(:delete), retreat_path(retreat), class: "btn btn-danger", 
-                method: :delete, data: { confirm: t(:are_you_sure) } %></li>
-          </ul>
-        <% end %>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
-<br />

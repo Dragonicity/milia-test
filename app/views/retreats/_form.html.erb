@@ -31,14 +31,12 @@
           style: "display:none;" %>
     </label>
   </div>
-  <%= f.hidden_field :main_image_cache %>
   <div class="form-group">
     <label class="btn btn-secondary">
       <%= t(:upload_thumb_nail_file) %> <%= f.file_field :thumb_nail,
           style: "display:none;" %>
     </label>
   </div>
-  <%= f.hidden_field :thumb_nail_cache %>
   <div class="form-group">
     <%= f.label t(:body), class: ('required' if required?(@retreat, :body)) %>
     <%= f.hidden_field :body, class: 'form-control', rows: '15', id: "blog_body" %>
