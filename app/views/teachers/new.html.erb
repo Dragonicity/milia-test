@@ -1,0 +1,9 @@
+<div class="page-header">
+  <%= render 'shared/page_title', title: t(:teacher_new_title) %>
+  <ul class="actions">
+    <li><%= link_to t(:index), teachers_path, class: "index" %></li>
+  </ul>
+</div>
+<div class="container">
+  <%= render 'form' %>
+</div>

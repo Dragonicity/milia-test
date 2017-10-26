@@ -6,7 +6,7 @@ class Blog < ApplicationRecord
   belongs_to :user
   belongs_to :topic
   has_many :comments, dependent: :destroy
-  validates_presence_of :title, :topic, :body
+  validates_presence_of :title, :subtitle, :topic, :body
 
   mount_uploader :main_image, ImageUploader
   mount_uploader :thumb_nail, ImageUploader

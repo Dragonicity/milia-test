@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       get '/import', action: :import, on: :collection
     end
     resources :subscriptions
+    resources :teachers
     resources :topics, only: [:index, :show]
 
     mount ActionCable.server => '/cable'

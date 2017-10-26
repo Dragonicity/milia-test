@@ -9,6 +9,7 @@ en:
   all_rights_reserved:    "all rights reserved"
   are_you_sure:           "Are you sure?"
   back_to_top:            "Back to top"
+  biography:              "Biography"
   blog:                   "Blog"
   body:                   "Body"
   brand:                  "Dream Cauldron"
@@ -65,8 +66,10 @@ en:
   store:                  "Store"
   subject:                "Subject"
   subscribe:              "Subscribe"
+  subtitle:               "Subtitle"
   tags:                   "Tags"
   tags_separated:         "Tags (separated by commas)"
+  teacher:                "Teacher"
   teachers:               "Teachers"
   terms_of_service:       "Terms of Service"
   thumb_nail:             "Thumb Nail"
@@ -118,6 +121,10 @@ en:
   retreat_index_title:    "Retreats"
   retreat_new_title:      "New retreat"
   retreat_show_title:     "Retreat"
+  teacher_edit_title:     "Edit teacher"
+  teacher_index_title:    "Teachers"
+  teacher_new_title:      "New teacher"
+  teacher_show_title:     "Teacher"
 
   # Kaminari Pagination
 

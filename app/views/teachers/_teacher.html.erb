@@ -1,0 +1,17 @@
+<div class="card mr-0">
+  <div class="card-img-top img-fluid">
+    <%= image_tag set_img(teacher.thumb_nail, 'thumb'), class: "card-img-top" %>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title"><%= link_to teacher.name, teacher_path(teacher) %></h4>
+    <div class="card-text"><p><%= teacher.biography %></p>
+      <% if logged_in?(:site_admin) %>
+        <ul class="actions">
+          <li><%= link_to t(:edit), edit_teacher_path(teacher), class: "btn btn-primary" %></li>
+          <li><%= link_to t(:delete), teacher_path(teacher), class: "btn btn-danger", 
+              method: :delete, data: { confirm: t(:are_you_sure) } %></li>
+        </ul>
+      <% end %>
+    </div>  
+  </div>
+</div>

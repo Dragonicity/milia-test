@@ -19,6 +19,10 @@ module ApplicationHelper
         title: t(:blog)
       },
       {
+        url: teachers_path,
+        title: t(:teachers)
+      },
+      {
         url: about_path,
         title: t(:about)
       },

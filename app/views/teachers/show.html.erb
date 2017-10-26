@@ -1,0 +1,16 @@
+<div class="page-header">
+  <%= render 'shared/page_title', title: t(:teacher_show_title) %>
+  <ul class="actions">
+    <li><%= link_to t(:index),  teachers_path, class: "index" %></li>
+    <% if logged_in?(:site_admin) %>
+      <li><%= link_to t(:edit),   edit_teacher_path(@teacher), class: "edit" %></li>
+      <li><%= link_to t(:delete), teacher_path, class: "delete", 
+              method: :delete, data: { confirm: t(:are_you_sure) } %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="container">
+  <%= image_tag set_img(@teacher.main_image, 'main'), width: "100%" %>
+  <h4><%= @teacher.name %></h4>
+  <p><%= sanitize @teacher.biography %></p>
+</div>

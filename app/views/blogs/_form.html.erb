@@ -6,7 +6,11 @@
     <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :topic_id %>
+    <%= f.label t(:subtitle), class: ('required' if required?(@blog, :subtitle)) %>
+    <%= f.text_field :subtitle, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :topic_id, t(:topic) %>
     <%= f.collection_select(:topic_id, Topic.all.order("title ASC"), :id, :title,
       {
         include_blank: true

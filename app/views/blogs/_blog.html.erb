@@ -4,17 +4,14 @@
   </div>
   <div class="card-body">
     <h4 class="card-title"><%= link_to blog.title, blog_path(blog) %></h4>
-    <div class="card-text">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= blog.user.full_name %></li>
-        <li class="list-group-item"><%= t(:published) %> <%= distance_of_time_in_words(blog.created_at, Time.now)%>&nbsp;<%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= blog.comments.count if blog.comments.count > 0 %></li>
-      </ul>
+    <div class="card-text"><p><%= blog.subtitle %></p>
+      <p><%= blog.user.full_name %></p>
+      <p><%= t(:published) %> <%= distance_of_time_in_words(blog.created_at, Time.now)%>&nbsp;<%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= blog.comments.count if blog.comments.count > 0 %></p>
       <% if logged_in?(:site_admin) %>
         <ul class="actions">
           <li><%= link_to t(:edit), edit_blog_path(blog), class: "btn btn-primary" %></li>
           <li><%= link_to t(:delete), blog_path(blog), class: "btn btn-danger", 
               method: :delete, data: { confirm: t(:are_you_sure) } %></li>
-          <li><%= link_to blog_status_text(blog), toggle_status_blog_path(blog), class: "btn btn-dark" %></li>
         </ul>
       <% end %>
     </div>  

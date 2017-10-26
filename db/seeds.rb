@@ -20,6 +20,7 @@ puts "5 topics created"
 12.times do |blog|
   Blog.create!(
     title:      "Blog Post #{blog}",
+    subtitle: "Excerpt from the Crysalids by John Wyndham",
     body:       "When I was quite small I would sometimes dream of a city — which was strange because it began before I even knew what a city was. But this city, clustered on the curve of a big blue bay, would come into my mind. I could see the streets, and the buildings that lined them, the waterfront, even boats in the harbour; yet, waking, I had never seen the sea, or a boat. ... And the buildings were quite unlike any I knew. The traffic in the streets was strange, carts running with no horses to pull them; and sometimes there were things in the sky, shiny fish-shaped things that certainly were not birds.",
     thumb_nail: "http://placehold.it/350x200",
     main_image: "http://placehold.it/600x400",
@@ -81,3 +82,11 @@ Product.create!(title: 'Ruby Performance Optimization',
   price: 46.00)
 
 puts "3 products created"
+
+Teacher.create!(name: "Mark Nelson", biography: "TBC")
+Teacher.create!(name: "Hilsue Wong", biography: "TBC")
+Teacher.create!(name: "Vanina de Verneuil", biography: "TBC")
+Teacher.create!(name: "Barbara Cooper", biography: "TBC")
+Teacher.create!(name: "Ross Eathorne", biography: "TBC")
+
+puts "5 teachers created"

@@ -19,6 +19,7 @@
   </nav>
   <%= image_tag set_img(@blog.main_image, 'main'), width: "100%" %>
   <h4><%= @blog.title %></h4>
+  <h6><%= @blog.subtitle %></h6>
   <p><%= @blog.user.full_name %></p>
   <p><%= t(:published) %> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= @blog.comments.count if @blog.comments.count > 0 %></i> </p>
   <p><%= sanitize @blog.body %></p> 
