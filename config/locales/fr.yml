@@ -2,13 +2,13 @@ fr:
  
 # Dictionary
 
-  about:                  "Sur"
+  about:                  "A propos"
   actions:                "Actes"
   add_to_cart:            "Ajouter au panier"
   ago:                    "depuis"
   all_rights_reserved:    "tous les droits sont réservés"
   are_you_sure:           "Êtes-vous sûr?"
-  back_to_top:            "Retour au sommet"
+  back_to_top:            "Retour en haut de page"
   biography:              "La biographie"
   blog:                   "Blogue"
   body:                   "Corps de texte"
@@ -33,7 +33,7 @@ fr:
   free_trial:             "Essai gratuit"
   home:                   "Page d'accueil"
   import:                 "Importer"
-  index:                  "Indice"
+  index:                  "Index"
   last_name:              "Nom de famille"
   message:                "Message"
   name:                   "Nom"
@@ -47,7 +47,7 @@ fr:
   products:               "Produits"
   program_link:           "Lien du programme"
   publish:                "Publier"
-  published:              "Publié"
+  published:              "A été publié"
   rbg_id:                 "RBG ID"
   quantity:               "Quantité"
   registration_link:      "Lien d'inscription"
@@ -64,7 +64,7 @@ fr:
   start_date:             "Date de début"
   status:                 "Statut"
   store:                  "Boutique"
-  subject:                "Assujettir"
+  subject:                "Sujet"
   subscribe:              "Souscrire"
   subtitle:               "Sous-titre"
   summary:                "Résumé"
@@ -80,7 +80,7 @@ fr:
   topics:                 "Les sujets"
   total:                  "Total"
   unpublish:              "Dépublier"
-  upload_main_image_file: "Télécharger le fichier image principal"
+  upload_main_image_file: "Télécharger l'image principal"
   upload_thumb_nail_file: "Télécharger l'image de la vignette"
   user:                   "Utilisateur"
   yay:                    "Oui"
@@ -133,7 +133,7 @@ fr:
   activerecord:
     models:
       codelist:               "liste des codes"
-      codelistvalue:          "code valeur de liste"
+      codelistvalue:          "valeur de la liste des codes"
       code_list_translation:  "traduction de la liste des codes"
       code_list_value_translation: "traduction de la valeur de la liste de codes"
       contact:                "contact"
@@ -152,18 +152,18 @@ fr:
         first_name:           "Prénom"
         last_name:            "Nom de famille"
         admin:                "Admin"
-        current_password: Mot de passe actuel
+        current_password: "Mot de passe"
         email: Courriel
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
         remember_me: Se souvenir de moi
-        reset_password_token: 
+        reset_password_token: Réinitialiser le mot de passe
         unlock_token: Clé de déblocage
       contact:
         name:                 "Nom"
         email:                "Courriel"
         phone:                "Téléphone"
-        subject:              "Assujettir"
+        subject:              "Sujet"
         message:              "Message"
     errors:
       messages:

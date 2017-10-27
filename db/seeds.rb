@@ -83,10 +83,14 @@ Product.create!(title: 'Ruby Performance Optimization',
 
 puts "3 products created"
 
-Teacher.create!(name: "Mark Nelson", biography: "TBC")
-Teacher.create!(name: "Hilsue Wong", biography: "TBC")
-Teacher.create!(name: "Vanina de Verneuil", biography: "TBC")
-Teacher.create!(name: "Barbara Cooper", biography: "TBC")
-Teacher.create!(name: "Ross Eathorne", biography: "TBC")
+Teacher.create!(name: "Mark Nelson", summary: "Shamanic practitioner and mentor", biography: "TBC")
+
+Teacher.create!(name: "Hilsue Wong", summary: "Aerial yoga instructor and life coach", biography: "TBC")
+
+Teacher.create!(name: "Vanina de Verneuil", summary: "Workshop leader and creativity consultant", biography: "TBC")
+
+Teacher.create!(name: "Barbara Cooper", summary: "Teaching cnsultant", biography: "TBC")
+
+Teacher.create!(name: "Ross Eathorne", summary: "Movement medicine practitioner and coach", biography: "TBC")
 
 puts "5 teachers created"
