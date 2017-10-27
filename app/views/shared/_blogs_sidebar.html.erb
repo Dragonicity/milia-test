@@ -6,8 +6,14 @@
     <% end %><br />
     <h4><%= t(:tags) %></h4>
     <div id='tag_cloud'>
-      <% tag_cloud Blog.tag_counts.order("name asc"), %w{s m l} do |tag, css_class| %>
-        <%= link_to tag.name, tag_path(tag.name), class: css_class %>&nbsp;
+      <% if logged_in?(:site_admin, :teacher) %>
+        <% tag_cloud Blog.tag_counts.order("name asc"), %w{s m l} do |tag, css_class| %>
+          <%= link_to tag.name, tag_path(tag.name), class: css_class %>&nbsp;
+        <% end %>
+      <% else %>
+        <% tag_cloud Blog.published.tag_counts.order("name asc"), %w{s m l} do |tag, css_class| %>
+          <%= link_to tag.name, tag_path(tag.name), class: css_class %>&nbsp;
+        <% end %>
       <% end %>
     </div>
   </div>
