@@ -4,7 +4,7 @@ class TeachersController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @teachers = Teacher.all.page(params[:page]).per(3)
+    @teachers = Teacher.all.paginate(page: params[:page], per_page: 3)
   end
 
   def show

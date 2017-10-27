@@ -22,7 +22,6 @@ gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 gem 'devise', '~> 4.2'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
-gem 'kaminari', '~> 0.17.0'
 gem 'bootstrap4-kaminari-views'
 gem 'trix'
 gem 'carrierwave', '~> 1.0'
@@ -33,6 +32,8 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'letter_opener', group: :development
 gem 'acts-as-taggable-on', '~> 5.0'
 gem 'ransack'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -3,7 +3,7 @@ class RetreatsController < ApplicationController
   #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
 
   def index
-    @retreats = Retreat.all.reverse_date_order.page(params[:page]).per(3)
+    @retreats = Retreat.all.reverse_date_order.paginate(page: params[:page], per_page: 3)
   end
 
   def show

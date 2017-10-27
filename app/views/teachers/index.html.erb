@@ -5,15 +5,16 @@
   </ul>
 </div>
 <br />
-<div class="row row-offcanvas row-offcanvas-right">
-  <div class="col-sm-10">
-    <p class="float-right d-md-none">
-      <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
-    </p>
-      <%= paginate @teachers %> <br />
-      <div class="card-deck">
-        <%= render @teachers %>
-      </div>
-      <%= paginate @teachers %>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row justify-content-center">
+      <%= will_paginate @teachers %>
+    </div>
+    <div class="card-deck">
+      <%= render @teachers %>
+    </div><br />
+    <div class="row justify-content-center">
+      <%= will_paginate @retreats %>
+    </div>
   </div>
 </div>

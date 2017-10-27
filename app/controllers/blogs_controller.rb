@@ -8,13 +8,13 @@ class BlogsController < ApplicationController
     @q = Blog.ransack(params[:q])
     case 
     when logged_in?(:site_admin) && params[:tag] == nil
-      @blogs = @q.result.reverse_date_order.page(params[:page]).per(3)
+      @blogs = @q.result.reverse_date_order.paginate(page: params[:page], per_page: 3)
     when logged_in?(:site_admin) && params[:tag]
-      @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
+      @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.paginate(page: params[:page], per_page: 3)
     when !logged_in?(:site_admin) && params[:tag] == nil
-      @blogs = @q.result.published.reverse_date_order.page(params[:page]).per(3)
+      @blogs = @q.result.published.reverse_date_order.page(params[:page]).paginate(page: params[:page], per_page: 3)
     when !logged_in?(:site_admin) && params[:tag]
-       @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.page(params[:page]).per(3)
+       @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.paginate(page: params[:page], per_page: 3)
     end
   end
 
