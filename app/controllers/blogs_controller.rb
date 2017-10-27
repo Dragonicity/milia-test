@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
     when logged_in?(:site_admin, :teacher) && params[:tag]
       @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.paginate(page: params[:page], per_page: 3)
     when !logged_in?(:site_admin, :teacher) && params[:tag] == nil
-      @blogs = @q.result.published.reverse_date_order.page(params[:page]).paginate(page: params[:page], per_page: 3)
+      @blogs = @q.result.published.reverse_date_order.paginate(page: params[:page], per_page: 3)
     when !logged_in?(:site_admin, :teacher) && params[:tag]
        @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.paginate(page: params[:page], per_page: 3)
     end

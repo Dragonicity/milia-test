@@ -1,16 +1,17 @@
 class TopicsController < ApplicationController
-  access site_admin: :all
   before_action :set_sidebar_topics
+
   def index
     @topics = Topic.all
   end
 
   def show
     @topic = Topic.find(params[:id])
-    if logged_in?(:site_admin)
-      @blogs =  @topic.blogs.reverse_date_order.page(params[:page]).per(5)
+    @q = Blog.ransack(params[:q])
+    if logged_in?(:site_admin, :teacher)
+      @blogs =  @topic.blogs.reverse_date_order.paginate(page: params[:page], per_page: 3)
     else
-      @blogs = @topic.blogs.published.reverse_date_order.page(params[:page]).per(5)
+      @blogs = @topic.blogs.published.reverse_date_order.paginate(page: params[:page], per_page: 3)
     end
   end
 
