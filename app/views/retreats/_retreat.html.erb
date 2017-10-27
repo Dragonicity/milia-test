@@ -11,7 +11,7 @@
   <div class="card-body">
     <%= link_to(t(:program_link), retreat.program_link, target: :_blank) %>
     <%= link_to(t(:registration_link), retreat.registration_link, target: :_blank) %>
-    <% if logged_in?(:site_admin) %>
+    <% if logged_in?(:site_admin, :teacher) %>
         <ul class="actions mt-2">
         <li><%= link_to t(:edit), edit_retreat_path(retreat), class: "btn btn-primary" %></li>
         <li><%= link_to t(:delete), retreat_path(retreat), class: "btn btn-danger", 

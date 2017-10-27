@@ -1,7 +1,7 @@
 <div class="page-header">
   <%= render 'shared/page_title', title: t(:retreat_index_title) %>
   <ul class="actions form-inline">
-    <li><%= link_to t(:new), new_retreat_path, class: "new" if logged_in?(:site_admin) %></li>
+    <li><%= link_to t(:new), new_retreat_path, class: "new" if logged_in?(:site_admin, :teacher) %></li>
     <li><%= link_to t(:import), import_retreats_path, class: "import" if logged_in?(:site_admin) %></li>
   </ul>
 </div>
