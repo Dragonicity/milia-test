@@ -3,7 +3,7 @@
   <ul class="actions">
     <li><%= link_to t(:index), blogs_path, class: "index" %></li>
     <li><%= link_to t(:delete), blog_path, class: "delete", 
-            method: :delete, data: { confirm: t(:are_you_sure) } %></li>
+            method: :delete, data: { confirm: t(:are_you_sure) } if logged_in?(:site_admin, :teacher)%></li>
   </ul>
 </div>
 <div class="container">

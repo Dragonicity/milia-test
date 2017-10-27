@@ -7,7 +7,7 @@
     <div class="card-text"><p><%= blog.subtitle %></p>
       <p><%= blog.user.full_name %></p>
       <p><%= t(:published) %> <%= distance_of_time_in_words(blog.created_at, Time.now)%>&nbsp;<%= t(:ago) %>&nbsp;<i class="fa fa-comment-o"></i>&nbsp;<%= blog.comments.count if blog.comments.count > 0 %></p>
-      <% if logged_in?(:site_admin) %>
+      <% if logged_in?(:site_admin, :teacher) %>
         <ul class="actions">
           <li><%= link_to t(:edit), edit_blog_path(blog), class: "btn btn-primary" %></li>
           <li><%= link_to t(:delete), blog_path(blog), class: "btn btn-danger", 

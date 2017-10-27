@@ -6,19 +6,19 @@ class BlogsController < ApplicationController
   def index
     @q = Blog.ransack(params[:q])
     case 
-    when logged_in?(:site_admin) && params[:tag] == nil
+    when logged_in?(:site_admin, :teacher) && params[:tag] == nil
       @blogs = @q.result.reverse_date_order.paginate(page: params[:page], per_page: 3)
-    when logged_in?(:site_admin) && params[:tag]
+    when logged_in?(:site_admin, :teacher) && params[:tag]
       @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.paginate(page: params[:page], per_page: 3)
-    when !logged_in?(:site_admin) && params[:tag] == nil
+    when !logged_in?(:site_admin, :teacher) && params[:tag] == nil
       @blogs = @q.result.published.reverse_date_order.page(params[:page]).paginate(page: params[:page], per_page: 3)
-    when !logged_in?(:site_admin) && params[:tag]
+    when !logged_in?(:site_admin, :teacher) && params[:tag]
        @blogs = @q.result.tagged_with(params[:tag]).reverse_date_order.paginate(page: params[:page], per_page: 3)
     end
   end
 
   def show
-    if logged_in?(:site_admin) || @blog.published?
+    if logged_in?(:site_admin, :teacher) || @blog.published?
       @blog = Blog.includes(:comments).friendly.find(params[:id])
       @comment = Comment.new
       @seo_keywords = @blog.title
