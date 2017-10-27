@@ -12,5 +12,6 @@
 <div class="container">
   <%= image_tag set_img(@teacher.main_image, 'main'), width: "100%" %>
   <h4><%= @teacher.name %></h4>
+  <p><%= @teacher.summary %></p>
   <p><%= sanitize @teacher.biography %></p>
 </div>

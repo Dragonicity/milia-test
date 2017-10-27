@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
     <h4 class="card-title"><%= link_to teacher.name, teacher_path(teacher) %></h4>
-    <div class="card-text"><p><%= teacher.biography %></p>
+    <div class="card-text"><p><%= teacher.summary %></p>
       <% if logged_in?(:site_admin) %>
         <ul class="actions">
           <li><%= link_to t(:edit), edit_teacher_path(teacher), class: "btn btn-primary" %></li>

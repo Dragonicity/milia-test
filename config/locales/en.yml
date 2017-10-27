@@ -67,6 +67,7 @@ en:
   subject:                "Subject"
   subscribe:              "Subscribe"
   subtitle:               "Subtitle"
+  summary:                "Summary"
   tags:                   "Tags"
   tags_separated:         "Tags (separated by commas)"
   teacher:                "Teacher"
