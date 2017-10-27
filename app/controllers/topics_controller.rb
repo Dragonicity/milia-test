@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  access site_admin: :all
   before_action :set_sidebar_topics
   def index
     @topics = Topic.all

@@ -1,8 +1,7 @@
 class BlogsController < ApplicationController
-
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   before_action :set_sidebar_topics, except: [:update, :create, :destroy, :toggle_status]
-  #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
+  access [:all, :user] => [:show, :index], teacher: :all, site_admin: :all
 
   def index
     @q = Blog.ransack(params[:q])

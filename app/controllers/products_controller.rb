@@ -1,10 +1,8 @@
 class ProductsController < ApplicationController
   include SetCurrentCart
   before_action :set_cart, only: [:update]
-
   before_action :set_product, only: [:show, :edit, :update, :destroy ]
-  
-  #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
+  access [:all, :user] => [:show, :index], teacher: :all, site_admin: :all
 
   def index
     @products = Product.all

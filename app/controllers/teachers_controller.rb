@@ -1,7 +1,6 @@
 class TeachersController < ApplicationController
-
   before_action :set_teacher, only: [:show, :edit, :update, :destroy, :toggle_status]
-  #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
+  access [:all, :user] => [:show, :index], teacher: :all, site_admin: :all
 
   def index
     @teachers = Teacher.all.paginate(page: params[:page], per_page: 3)

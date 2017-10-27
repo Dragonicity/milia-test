@@ -1,6 +1,6 @@
 class RetreatsController < ApplicationController
   before_action :set_retreat, only: [:show, :edit, :update, :destroy ]
-  #access all: [:show, :index], user: {except: [:destroy]}, root_admin: :all
+  access [:all, :user] => [:show, :index], teacher: :all, site_admin: :all
 
   def index
     @retreats = Retreat.all.reverse_date_order.paginate(page: params[:page], per_page: 3)

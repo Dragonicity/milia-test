@@ -1,12 +1,12 @@
 <div class="page-header">
   <%= render 'shared/page_title', title: t(:blog_show_title) %>
   <ul class="actions">
-    <li><%= link_to blog_status_text(@blog), toggle_status_blog_path(@blog), class: "publish" %></li>
     <li><%= link_to t(:index),  blogs_path, class: "index" %></li>
     <% if logged_in?(:site_admin) %>
       <li><%= link_to t(:edit),   edit_blog_path(@blog), class: "edit" %></li>
       <li><%= link_to t(:delete), blog_path, class: "delete", 
               method: :delete, data: { confirm: t(:are_you_sure) } %></li>
+      <li><%= link_to blog_status_text(@blog), toggle_status_blog_path(@blog), class: "publish" %></li>
     <% end %>
   </ul>
 </div>
