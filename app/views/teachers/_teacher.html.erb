@@ -1,7 +1,8 @@
 <div class="card mr-0">
-  <div class="card-img-top img-fluid">
-    <%= image_tag set_img(teacher.thumb_nail, 'thumb'), class: "card-img-top" %>
-  </div>
+  <%= link_to(image_tag(set_img(teacher.thumb_nail, 'thumb'), 
+    options = {class: 'card-img-top'}), teacher_path(teacher)) %>
+
+
   <div class="card-body">
     <h4 class="card-title"><%= link_to teacher.name, teacher_path(teacher) %></h4>
     <div class="card-text"><p><%= teacher.summary %></p>

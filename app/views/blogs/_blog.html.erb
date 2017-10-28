@@ -1,7 +1,8 @@
 <div class="card mr-0">
-  <div class="card-img-top img-fluid">
-    <%= image_tag set_img(blog.thumb_nail, 'thumb'), class: "card-img-top" %>
-  </div>
+  <%= link_to(image_tag(set_img(blog.thumb_nail, 'thumb'), 
+    options = {class: 'card-img-top'}), blog_path(blog)) %>
+
+
   <div class="card-body">
     <h4 class="card-title"><%= link_to blog.title, blog_path(blog) %></h4>
     <div class="card-text"><p><%= blog.subtitle %></p>
