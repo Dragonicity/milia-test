@@ -1,0 +1,24 @@
+<div class="form-group">
+  <label class="btn btn-secondary">
+    <%= t(:upload_main_image) %> <%= f.file_field :main_image,
+        style: "display:none;" %>
+  </label>
+  <% if f.object.main_image? %>
+    <%= image_tag f.object.main_image.url %>
+    <%= f.label t(:remove_main_image) %>
+    <%= f.check_box :remove_main_image %> 
+  <% end %>
+  </div>
+  <%= f.hidden_field :main_image_cache %>
+  <div class="form-group">
+  <label class="btn btn-secondary">
+    <%= t(:upload_thumb_nail) %> <%= f.file_field :thumb_nail,
+        style: "display:none;" %>
+  </label>
+   <% if f.object.thumb_nail? %>
+    <%= image_tag f.object.thumb_nail.url %>
+    <%= f.label t(:remove_thumb_nail) %>
+    <%= f.check_box :remove_thumb_nail %> 
+  <% end %>
+</div>
+<%= f.hidden_field :thumb_nail_cache %>

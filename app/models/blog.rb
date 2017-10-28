@@ -11,5 +11,5 @@ class Blog < ApplicationRecord
   mount_uploader :main_image, ImageUploader
   mount_uploader :thumb_nail, ImageUploader
 
-  scope :reverse_date_order, -> { order("created_at DESC") }
+  scope :reverse_date_order, -> { order("blogs.created_at DESC") }
 end

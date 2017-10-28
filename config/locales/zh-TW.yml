@@ -78,8 +78,6 @@ zh-TW:
   topics:                 "主題"
   total:                  "總"
   unpublish:              "取消發布"
-  upload_main_image_file: "上傳主圖像文件"
-  upload_thumb_nail_file: "上傳縮略圖圖像文件"
   user:                   "用戶"
   yay:                    "是"
 
@@ -105,6 +103,13 @@ zh-TW:
   sign_up:                "註冊"
   sign_in:                "簽到"
   sign_out:               "退出"
+
+ # Image processing
+
+  remove_main_image:      "刪除主圖像"
+  remove_thumb_nail:      "刪除拇指"
+  upload_main_image:      "上傳主圖"
+  upload_thumb_nail:      "上傳拇指指甲"
 
   # View titles
 

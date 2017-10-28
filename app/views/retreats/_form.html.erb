@@ -25,18 +25,7 @@
     <%= f.label t(:registration_link), class: ('required' if required?(@retreat, :registration_link)) %>
     <%= f.text_field :registration_link, class: 'form-control' %>
   </div>
-  <div class="form-group">
-    <label class="btn btn-secondary">
-      <%= t(:upload_main_image_file) %> <%= f.file_field :main_image,
-          style: "display:none;" %>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="btn btn-secondary">
-      <%= t(:upload_thumb_nail_file) %> <%= f.file_field :thumb_nail,
-          style: "display:none;" %>
-    </label>
-  </div>
+  <%= render 'shared/images', f: f %>
   <div class="form-group">
     <%= f.label t(:body), class: ('required' if required?(@retreat, :body)) %>
     <%= f.hidden_field :body, class: 'form-control', rows: '15', id: "retreat_body" %>

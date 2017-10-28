@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
   access [:all, :user] => [:show, :index], teacher: :all, site_admin: :all
 
   def index
-    @teachers = Teacher.all.paginate(page: params[:page], per_page: 3)
+    @teachers = Teacher.all.name_order.paginate(page: params[:page], per_page: 3)
   end
 
   def show
@@ -44,7 +44,9 @@ class TeachersController < ApplicationController
   private
     
     def teacher_params
-      params.require(:teacher).permit(:name, :summary, :biography, :main_image, :thumb_nail )
+      params.require(:teacher).permit(:name, :summary, :biography, 
+        :main_image, :main_image_cache, :remove_main_image, :thumb_nail, 
+        :thumb_nail_cache, :remove_thumb_nail )
     end
 
     def set_teacher

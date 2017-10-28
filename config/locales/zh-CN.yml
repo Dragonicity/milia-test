@@ -80,8 +80,6 @@ zh-CN:
   topics:                 "主题"
   total:                  "总"
   unpublish:              "取消发布"
-  upload_main_image_file: "上传主图像文件"
-  upload_thumb_nail_file: "上传缩略图图像文件"
   user:                   "用户"
   yay:                    "是"
 
@@ -107,6 +105,13 @@ zh-CN:
   sign_up:                "注册"
   sign_in:                "签到"
   sign_out:               "退出"
+
+ # Image processing
+
+  remove_main_image:      "删除主图像"
+  remove_thumb_nail:      "删除拇指"
+  upload_main_image:      "上传主图e"
+  upload_thumb_nail:      "上传拇指指甲"
 
   # View titles
 

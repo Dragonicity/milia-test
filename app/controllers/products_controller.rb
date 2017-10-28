@@ -56,8 +56,10 @@ class ProductsController < ApplicationController
   private
     
     def product_params
-      params.require(:product).permit(:title, :description, :thumb_nail, 
-        :thumb_nail_cache, :main_image, :main_image_cache, :price)
+
+      params.require(:product).permit(:title, :description, :main_image, 
+        :main_image_cache, :remove_main_image, :thumb_nail, :thumb_nail_cache,
+        :remove_thumb_nail, :price)
     end
 
     def set_product

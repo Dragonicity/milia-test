@@ -19,6 +19,8 @@ class Product < ApplicationRecord
   mount_uploader :main_image, ImageUploader
   mount_uploader :thumb_nail, ImageUploader
 
+  scope :title_order, -> { order("products.title ASC") }
+
   private
 
   def ensure_no_line_items

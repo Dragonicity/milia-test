@@ -5,4 +5,6 @@ class Teacher < ApplicationRecord
 
   mount_uploader :main_image, ImageUploader
   mount_uploader :thumb_nail, ImageUploader
+
+  scope :name_order, -> { order("teachers.name ASC") }
 end

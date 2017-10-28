@@ -79,8 +79,6 @@ en:
   topics:                 "Topics"
   total:                  "Total"
   unpublish:              "Unpublish"
-  upload_main_image_file: "Upload main image file"
-  upload_thumb_nail_file: "Upload thumb nail file"
   user:                   "User"
   yay:                    "Yes"
 
@@ -106,6 +104,13 @@ en:
   sign_up:                "Register"
   sign_in:                "Login"
   sign_out:               "Logout"
+
+  # Image processing
+
+  remove_main_image:      "Remove main image"
+  remove_thumb_nail:      "Remove thumb nail"
+  upload_main_image:      "Upload main image"
+  upload_thumb_nail:      "Upload thumb nail"
 
   # View titles
 
@@ -156,13 +161,6 @@ en:
         separator:  "."
         delimiter:  ","
         format:     "%u%n"
-
-  errors:
-    template:
-      body:         "There were problems with the following fields:"
-      header:       
-        one:        "1 error prohibited this %{model} from being saved"
-        other:      "%{count} errors prohibited this %{model} from being saved"
 
   devise:
     confirmations:
@@ -240,3 +238,8 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+    template:
+      body:         "There were problems with the following fields:"
+      header:       
+        one:        "1 error prohibited this %{model} from being saved"
+        other:      "%{count} errors prohibited this %{model} from being saved"

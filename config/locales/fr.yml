@@ -80,8 +80,6 @@ fr:
   topics:                 "Les sujets"
   total:                  "Total"
   unpublish:              "Dépublier"
-  upload_main_image_file: "Télécharger l'image principal"
-  upload_thumb_nail_file: "Télécharger l'image de la vignette"
   user:                   "Utilisateur"
   yay:                    "Oui"
 
@@ -107,6 +105,13 @@ fr:
   sign_up:                "S'inscrire"
   sign_in:                "Se connecter"
   sign_out:               "Se déconnecter"
+
+ # Image processing
+
+  remove_main_image:      "Enlever l'image principale"
+  remove_thumb_nail:      "Enlever l'image de la vignette"
+  upload_main_image:      "Télécharger l'image principal"
+  upload_thumb_nail:      "Télécharger l'image de la vignette"
 
   # View titles
 
