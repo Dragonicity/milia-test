@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :leads
     resources :line_items
     resources :orders
+    resources :photos
     resources :products do
       get :who_bought, on: :member
     end
