@@ -8,8 +8,8 @@ class CreateRetreats < ActiveRecord::Migration[5.1]
       t.string :teachers
       t.string :program_link
       t.string :registration_link
-      t.string :thumb_nail
       t.string :main_image
+      t.string :thumb_nail
       t.string :rbg_id
 
       t.timestamps

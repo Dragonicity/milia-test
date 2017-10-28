@@ -65,8 +65,10 @@ module ApplicationHelper
   end
 
   def set_img img, type
-    if img.model.main_image? || img.model.thumb_nail?
-      img
+    if img.model.main_image? && type == 'main' && type != 'thumb'
+      img.model.main_image
+    elsif img.model.thumb_nail? && type == 'thumb'
+      img.model.thumb_nail
     elsif type == 'thumb'
       image_generator(height: '350', width: '200')
     else
