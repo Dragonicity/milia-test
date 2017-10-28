@@ -27,7 +27,7 @@
   <%= render 'shared/images', f: f %>
   <div class="form-group">
     <%= f.label t(:body), class: ('required' if required?(@blog, :body)) %>
-    <%= f.text_area :body, class: 'form-control', rows: '15', id: "blog_body" %>
+    <%= f.hidden_field :body, class: 'form-control', rows: '15', id: "blog_body" %>
     <trix-editor input="blog_body"></trix-editor>
   </div>
   <div class="form-group">
