@@ -17,7 +17,6 @@
     <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb-item" %>
     <span class="breadcrumb-item active"><%= @blog.title %></span>
   </nav>
- 
   <div class="row">
     <div class="col-sm-6">
       <%= image_tag set_img(@blog.main_image, 'main') %>
@@ -41,6 +40,5 @@
         <%= render @blog.comments %>
       </div>
     </div>
-</div>
- 
+  </div>
 </div>

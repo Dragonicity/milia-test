@@ -29,7 +29,7 @@ class RetreatsController < ApplicationController
    def update
     if @retreat.update(retreat_params)
       flash[:notice] = "#{t(:retreat)} #{t(:updated)}"
-      redirect_to blogs_path
+      redirect_to retreats_path
     else
       render :edit
     end
@@ -88,8 +88,8 @@ class RetreatsController < ApplicationController
   private
     
     def retreat_params
-      params.require(:retreat).permit(:name, :start_date, :end_date, 
-        :teachers, :program_link, :registration_link, :thumb_nail, 
+      params.require(:retreat).permit(:name, :overview, :body, :start_date, 
+        :end_date, :teachers, :program_link, :registration_link, :thumb_nail,
         :thumb_mail_cache, :main_image, :main_image_cache, :rgb_id)
     end
 

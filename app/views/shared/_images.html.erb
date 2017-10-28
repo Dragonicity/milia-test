@@ -8,9 +8,9 @@
     <%= f.label t(:remove_main_image) %>
     <%= f.check_box :remove_main_image %> 
   <% end %>
-  </div>
-  <%= f.hidden_field :main_image_cache %>
-  <div class="form-group">
+</div>
+<%= f.hidden_field :main_image_cache %>
+<div class="form-group">
   <label class="btn btn-info">
     <%= t(:upload_thumb_nail) %> <%= f.file_field :thumb_nail,
         style: "display:none;" %>

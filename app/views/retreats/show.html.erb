@@ -10,11 +10,22 @@
   </ul>
 </div>
 <div class="container">
-  <%= image_tag @retreat.main_image, width: "100%" %>
-  <h4><%= @retreat.name %></h4>
-  <p><%= @retreat.teachers %></p>
-  <p><%= t(:start_date) %> <%= @retreat.start_date %></p>
-  <p><%= t(:end_date) %> <%= @retreat.end_date %></p>
-  <p><%= link_to(t(:program_link), @retreat.program_link, target: :_blank) %></p>
-  <p><%= link_to(t(:registration_link), @retreat.registration_link, target: :_blank) %></p>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= image_tag @retreat.main_image, width: "400" %>
+    </div>
+    <div class="col-sm-6">
+      <h4><%= @retreat.name %></h4>
+      <h6 class="text-muted"><%= @retreat.overview %></h6>
+        <p>Location: Trilanka, Lake Koggala, Sri Lanka</p>
+        <p>Cost: USD 8,000 plus accommodation</p>
+        <p>Teachers: <%= @retreat.teachers %></p>
+        <p><%= t(:start_date) %> : <%= @retreat.start_date.strftime('%v') %></p>
+        <p><%= t(:end_date) %> : <%= @retreat.end_date.strftime('%v') %></p>
+        <p><%= link_to(t(:program_link), @retreat.program_link, target: :_blank) %></p>
+        <p><%= link_to(t(:registration_link), @retreat.registration_link, target: :_blank) %></p>
+    </div>
+    <div class="col-sm-12">
+    <p><%= sanitize @retreat.body %></p> 
+  </div>
 </div>

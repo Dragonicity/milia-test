@@ -10,8 +10,14 @@
   </ul>
 </div>
 <div class="container">
-  <%= image_tag set_img(@teacher.main_image, 'main'), width: "100%" %>
-  <h4><%= @teacher.name %></h4>
-  <p><%= @teacher.summary %></p>
-  <p><%= sanitize @teacher.biography %></p>
+  <div class="row">
+    <div class="col-sm-6">
+       <%= image_tag set_img(@teacher.main_image, 'main'), width: '90%' %>
+    </div>
+    <div class="col-sm-6">
+      <h4><%= @teacher.name %></h4>  
+      <h6 class="text-muted"><%= @teacher.summary %></h6>
+      <p><%= sanitize @teacher.biography %></p>
+    </div>
+  </div>
 </div>

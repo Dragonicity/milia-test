@@ -2,6 +2,7 @@ class CreateRetreats < ActiveRecord::Migration[5.1]
   def change
     create_table :retreats do |t|
       t.string :name
+      t.string :retreats
       t.text :body
       t.date :start_date
       t.date :end_date
