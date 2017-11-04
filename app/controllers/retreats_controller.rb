@@ -56,21 +56,23 @@ class RetreatsController < ApplicationController
         unless Retreat.exists?(rbg_id: rbg_retreat["id"].to_s)
           retreat = Retreat.new
           retreat.name              = rbg_retreat["name"]
+          retreat.overview          = rbg_retreat["name"]
           retreat.start_date        = rbg_retreat["start_date"]
           retreat.end_date          = rbg_retreat["end_date"]
           retreat.teachers          = rbg_retreat["teachers"].join(", ")
+          retreat.location          = rbg_retreat["location"]
+          retreat.address           = rbg_retreat["address"]
+          retreat.available_spaces  = rbg_retreat["available_spaces"]
           retreat.program_link      = rbg_retreat["program_link"]
           retreat.registration_link = rbg_retreat["registration_link"]
           retreat.thumb_nail        = rbg_retreat["images"]["medium"]["url"]
           retreat.main_image        = rbg_retreat["images"]["large"]["url"]
-          retreat.rbg_id            = rbg_retreat["id"]
+          retreat.rbg_id            = rbg_retreat["id"].to_s
 
           if retreat.save
-            flash[:notice] = "#{t(:retreat)} #{t(:created)}"
             imported_retreats += 1
           else
-            flash[:notice] = "Error in saving retreat: " + rbg_retreat.rbg_id.to_s
-            render :index
+            flash[:alert] = "Error in saving retreat: " + rbg_retreat["id"].to_s
           end
         end
       end
@@ -89,8 +91,9 @@ class RetreatsController < ApplicationController
     
     def retreat_params
       params.require(:retreat).permit(:name, :overview, :body, :start_date, 
-        :end_date, :teachers, :program_link, :registration_link, :thumb_nail,
-        :thumb_mail_cache, :main_image, :main_image_cache, :rgb_id)
+        :end_date, :teachers, :location, :address, :available_spaces, 
+        :program_link, :registration_link, :thumb_nail, :thumb_mail_cache, 
+        :main_image, :main_image_cache, :rgb_id)
     end
 
     def set_retreat

@@ -22,6 +22,18 @@
     <%= f.text_field :teachers, class: 'form-control' %>
   </div>
   <div class="form-group">
+    <%= f.label t(:location), class: ('required' if required?(@retreat, :location)) %>
+    <%= f.text_field :location, class: 'form-control' %>
+  </div>
+   <div class="form-group">
+    <%= f.label t(:address), class: ('required' if required?(@retreat, :address)) %>
+    <%= f.text_area :address, class: 'form-control', rows: '5' %>
+  </div>
+   <div class="form-group">
+    <%= f.label t(:available_spaces), class: ('required' if required?(@retreat, :available_spaces)) %>
+    <%= f.number_field :available_spaces, class: 'form-control' %>
+  </div>
+  <div class="form-group">
     <%= f.label t(:program_link), class: ('required' if required?(@retreat, :program_link)) %>
     <%= f.text_field :program_link, class: 'form-control' %>
   </div>

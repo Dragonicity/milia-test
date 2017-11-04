@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028075150) do
+ActiveRecord::Schema.define(version: 20171028045622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20171028075150) do
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.string "thumb_nail"
     t.string "main_image"
+    t.string "thumb_nail"
     t.integer "status", default: 0
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -122,19 +122,22 @@ ActiveRecord::Schema.define(version: 20171028075150) do
 
   create_table "retreats", force: :cascade do |t|
     t.string "name"
+    t.string "overview"
     t.text "body"
     t.date "start_date"
     t.date "end_date"
     t.string "teachers"
+    t.string "location"
+    t.text "address"
+    t.integer "available_spaces"
     t.string "program_link"
     t.string "registration_link"
-    t.string "thumb_nail"
     t.string "main_image"
+    t.string "thumb_nail"
     t.string "rbg_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
-    t.string "overview"
     t.index ["slug"], name: "index_retreats_on_slug", unique: true
   end
 
